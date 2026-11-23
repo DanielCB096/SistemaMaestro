@@ -3,8 +3,10 @@
 **Estado:** implementado en rama, pendiente de CI y verificación manual.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `feat/h1-respaldo-restauracion`  
-**Commit:** `4e89fe0`  
-**Fecha:** 2026-11-23
+**Commit:** `8a4fe0c` (estado y pendientes); implementación en `4e89fe0`  
+**Fecha:** 2026-11-23  
+**Estado detallado:** `SistemaTienda/docs/estado-h1.md` en la rama  
+**CI:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>
 
 ## Alcance implementado
 
@@ -46,11 +48,12 @@
 
 ## Pendiente
 
-- CI de GitHub: compilación MAUI Windows/Android y pruebas.
+- CI de GitHub: el job de pruebas pasó; el job MAUI estaba en progreso al apagar el equipo.
 - Verificación manual en Windows y Android de los botones de Ajustes.
 - Restaurar en otro dispositivo.
 - Probar dos instancias en Windows.
 - Confirmar que el paquete de soporte no se comparte sin consentimiento.
+- Abrir la PR desde una cuenta colaboradora (la cuenta de Edge no tiene permiso).
 
 ## Nota sobre la PR
 
