@@ -1,0 +1,43 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+*.trx
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Configuración y secretos
+appsettings.json
+appsettings.*.json
+!appsettings.example.json
+.env
+.env.*
+*.pfx
+*.cer
+*.key
+*.pem
+
+# Datos y respaldos
+*.db
+*.db-shm
+*.db-wal
+*.bak
+*.7z
+*.zip
+backups/
+respaldos/
+
+# Logs
+logs/
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
