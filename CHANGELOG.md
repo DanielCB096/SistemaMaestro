@@ -10,3 +10,4 @@
 - Se documenta el protocolo de colaboración con IA y la ronda del 2026-11-23.
 - Se añade la política de cuotas: si un plan gratuito se agota, se espera al restablecimiento.
 - ChatGPT, Claude y Gemini aprueban la ruta incremental y autorizan H1; precios y piloto quedan condicionados a validación real.
+- H1 implementado en `tienda` (`feat/h1-respaldo-restauracion`, commit `4e89fe0`): respaldo exportable, restauración, paquete de soporte, WAL, `busy_timeout` e instancia única. 373 pruebas en verde; CI y verificación manual pendientes.

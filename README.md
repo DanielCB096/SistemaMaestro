@@ -18,6 +18,7 @@ Repositorio de diseño, decisiones y evolución de la plataforma modular para pe
 | [Modelo de documentos, pagos y caja](docs/02-arquitectura/modelo-documentos-pagos-caja.md) | Diseño conceptual del núcleo financiero y correcciones al modelo propuesto |
 | [Protocolo de colaboración con IA](docs/05-colaboracion-ia/protocolo.md) | Roles de ChatGPT, Claude, Gemini y DeepSeek; rondas, reglas y ADRs |
 | [Resumen de la ronda del 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23.md) | Qué aportó cada experto y qué cambió en el plan |
+| [H1 implementado](docs/06-referencias/h1-respaldo-restauracion.md) | Respaldo, restauración, WAL e instancia única; rama y commit |
 | [Plantilla de ADR](docs/07-decisiones/ADR-000-plantilla.md) | Formato para registrar decisiones arquitectónicas |
 
 ## Estructura

@@ -39,6 +39,7 @@
 
 - [Tienda](06-referencias/tienda.md)
 - [Gym-dotnet](06-referencias/gym-dotnet.md)
+- [H1 — Respaldo, restauración y WAL](06-referencias/h1-respaldo-restauracion.md)
 
 ## 07 — Decisiones
 
