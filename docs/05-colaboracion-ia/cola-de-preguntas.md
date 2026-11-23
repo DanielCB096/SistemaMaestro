@@ -24,6 +24,20 @@
 - **Licencia GymCore:** revisar propiedad/licencia con el autor.
 - **Precios:** validar con clientes reales, no con modelos.
 
+## Aprobación 2026-11-23
+
+Las 7 preguntas de aprobación fueron respondidas por ChatGPT, Claude y Gemini. Resultado: H1 autorizado; precios y piloto quedan condicionados a validación real. Ver [`rondas/2026-11-23-aprobacion.md`](rondas/2026-11-23-aprobacion.md).
+
+| Pregunta | Estado |
+|---|---|
+| Windows-first | aprobado |
+| Cliente ideal y alcance | aprobado |
+| Precios | tentativo; validar |
+| Piloto | aprobado el orden; fecha por puertas |
+| CFDI | aprobado como extensión |
+| Validaciones externas | ampliadas |
+| Iniciar H1 | **en ejecución** |
+
 ## Reglas de uso
 
 1. No enviar el informe completo si un resumen de 1 página basta.

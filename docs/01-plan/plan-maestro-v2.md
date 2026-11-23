@@ -1,7 +1,7 @@
 # Plan maestro v2 — Tienda + Gym → plataforma modular
 
 **Fecha:** 23 de noviembre de 2026  
-**Estado:** borrador de decisión, pendiente de aprobación del dueño del proyecto.  
+**Estado:** aprobado con condiciones el 2026-11-23; H1 autorizado.  
 **Fuentes:** auditoría técnica de `tienda` y `gym-dotnet`; revisión independiente de 526 líneas; rondas con ChatGPT (producto/negocio), Claude (arquitectura/riesgo) y Gemini (producto/UX/operaciones).  
 **Alcance:** plan de 90 días para dejar `tienda` vendible y preparar la extracción futura del núcleo. No se modifica ningún repositorio.
 

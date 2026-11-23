@@ -9,3 +9,4 @@
 - Se documentan el modelo de documentos/pagos/caja, hardware, actualizaciones y CFDI.
 - Se documenta el protocolo de colaboración con IA y la ronda del 2026-11-23.
 - Se añade la política de cuotas: si un plan gratuito se agota, se espera al restablecimiento.
+- ChatGPT, Claude y Gemini aprueban la ruta incremental y autorizan H1; precios y piloto quedan condicionados a validación real.

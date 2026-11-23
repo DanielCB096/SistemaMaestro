@@ -2,7 +2,7 @@
 
 | ADR | Título | Estado | Fecha |
 |---|---|---|---|
-| [ADR-001](ADR-001-tienda-v2-incremental.md) | Tienda V2 incremental y posposición del núcleo universal | propuesto | 2026-11-23 |
+| [ADR-001](ADR-001-tienda-v2-incremental.md) | Tienda V2 incremental y posposición del núcleo universal | aprobado con condiciones | 2026-11-23 |
 | [ADR-000](ADR-000-plantilla.md) | Plantilla | plantilla | — |
 
 ## Reglas

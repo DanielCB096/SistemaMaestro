@@ -1,8 +1,19 @@
 # ADR-001 — Tienda V2 incremental y posposición del núcleo universal
 
-**Estado:** propuesto.  
+**Estado:** aprobado con condiciones (2026-11-23).  
 **Fecha:** 2026-11-23.  
 **Decisores:** Daniel Cuevas Bernal; consultas a ChatGPT, Claude, Gemini y DeepSeek.
+
+## Aprobación
+
+ChatGPT, Claude y Gemini aprobaron la ruta incremental y autorizaron el inicio de H1. Quedaron condiciones:
+
+- Precios tentativos hasta medir costos reales.
+- Piloto condicionado a puertas de calidad, no a calendario.
+- Validaciones adicionales de privacidad, legal, seguridad y operación real.
+- H1 solo termina cuando la recuperación esté probada.
+
+Ver `docs/05-colaboracion-ia/rondas/2026-11-23-aprobacion.md`.
 
 ## Contexto
 

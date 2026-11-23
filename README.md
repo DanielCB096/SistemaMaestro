@@ -50,12 +50,12 @@ SistemaMaestro/
 
 ## Decisiones pendientes
 
-- [ ] Aprobar Windows-first para Tienda V2 y Android como soporte secundario.
-- [ ] Aprobar cliente ideal y exclusión de forrajeras/básculas en V2.
-- [ ] Aprobar precios y política de soporte.
-- [ ] Aprobar piloto en semana 9–10.
-- [ ] Aprobar CFDI como extensión futura y V2 sin timbrado.
-- [ ] Autorizar el inicio de H1 (respaldo/restauración/exportación) en `tienda`.
+- [x] Windows-first para Tienda V2 y Android como soporte secundario.
+- [x] Cliente ideal y exclusión de forrajeras/básculas en V2.
+- [~] Precios y política de soporte: aprobados como tentativos; validar con clientes y costos reales.
+- [x] Piloto después de H4; fecha condicionada a puertas de calidad, no a calendario.
+- [x] CFDI como extensión futura y V2 sin timbrado.
+- [x] Autorizado el inicio de H1 (respaldo/restauración/exportación) en `tienda`.
 
 ## Referencias externas
 

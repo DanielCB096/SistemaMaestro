@@ -33,6 +33,7 @@
 - [Protocolo](05-colaboracion-ia/protocolo.md)
 - [Cola de preguntas](05-colaboracion-ia/cola-de-preguntas.md)
 - [Ronda 2026-11-23](05-colaboracion-ia/rondas/2026-11-23.md)
+- [Aprobación 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-aprobacion.md)
 
 ## 06 — Referencias
 
