@@ -6,6 +6,7 @@
 - Se ejecuta la verificación manual en Windows con una base aislada: exportar, restaurar, respaldo previo, archivo corrupto, dos instancias y paquete de soporte sin/con base.
 - Hallazgo: `C:\Users\PC\Documents` no permite crear archivos en este equipo; la exportación fallaba con `FileNotFoundException`.
 - Corrección en `tienda` (`546900f`): `CarpetaExportacion` elige la primera carpeta escribible (Documentos → Escritorio → Descargas) y se agregan 3 pruebas. Total: **376/376**.
+- CI de `f748af8` en verde en el run `45320190550` (Windows y Android); la PR #40 queda lista para decisión de merge.
 - La verificación manual de Windows pasa en su núcleo; quedan pendientes Android, otro equipo físico, corte de energía y prueba con un dueño no técnico.
 - Se actualizan el estado de H1, la skill `backup-recovery` y la PR #40.
 

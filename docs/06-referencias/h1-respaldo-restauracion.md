@@ -1,16 +1,16 @@
 # H1 — Respaldo, restauración y confiabilidad local
 
-**Estado:** implementado; **CI en verde**; **PR #40 abierta**; verificación manual de Windows aprobada en su núcleo, pendiente Android, otro equipo, corte de energía y CI de `546900f`.  
+**Estado:** implementado; **CI en verde**; **PR #40 abierta**; verificación manual de Windows aprobada en su núcleo, pendiente Android, otro equipo y corte de energía.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `feat/h1-respaldo-restauracion`  
-**Commit:** `f748af8` (verificación); corrección de exportación en `546900f`; corrección de CI en `10fb923`; implementación en `4e89fe0`  
+**Commit:** `7c7c9a6` (documentación); verificación en `f748af8`; corrección de exportación en `546900f`; corrección de CI en `10fb923`; implementación en `4e89fe0`  
 **Fecha:** 2026-11-23  
 **Estado detallado:** `SistemaTienda/docs/estado-h1.md` en la rama  
 **Ronda de verificación:** [2026-11-23-verificacion-h1](../05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md)  
 **CI original:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>  
 **CI fallido:** run `45293159856` (commit `8a4fe0c`), `CS0234` en `AjustesPage.xaml.cs`.  
 **CI corregido:** <https://github.com/DanielCB096/tienda/actions/runs/45301168757> (commit `7e09cb7`), ambos jobs en verde.  
-**CI final de la rama:** <https://github.com/DanielCB096/tienda/actions/runs/45302432719> (commit `0ca16ef`), ambos jobs en verde.
+**CI final de código:** <https://github.com/DanielCB096/tienda/actions/runs/45320190550> (commit `f748af8`), ambos jobs en verde.
 
 ## Corrección de CI MAUI (`10fb923`)
 
@@ -20,7 +20,7 @@
   - `dotnet build SistemaTienda/SistemaTienda.Maui/SistemaTienda.Maui.csproj -f net10.0-windows10.0.19041.0 -c Release`: **0 errores**, 2 advertencias XAML preexistentes.
   - `dotnet test SistemaTienda/SistemaTienda.sln -c Release`: **376/376** en verde.
 - El nuevo run de CI quedó **en verde**: “Compilar y probar” y “Compilar app MAUI (Windows y Android)” pasaron.
-- El CI de `546900f` y `f748af8` queda pendiente de confirmar.
+- El CI de `f748af8` quedó **en verde** en el run `45320190550`; `7c7c9a6` es solo documentación.
 
 ## Alcance implementado
 
