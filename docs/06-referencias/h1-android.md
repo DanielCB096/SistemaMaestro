@@ -10,6 +10,19 @@
 
 > La creación de la PR desde el navegador falló con `Validation failed: must be a collaborator` porque la cuenta abierta en Edge no es colaboradora del repositorio. El cambio se integró por fast-forward después de confirmar el CI verde.
 
+## Entorno verificado
+
+| Componente | Resultado |
+|---|---|
+| .NET global | 11.0.100; SDK 10.0.400 disponible |
+| .NET local | 10.0.100 en `%LOCALAPPDATA%\dotnet10` |
+| Workloads | `maui-android` 10.0.115 instalado en el SDK local |
+| Android SDK | `%LOCALAPPDATA%\Android\Sdk`; platform 36, build-tools 36.0.0 |
+| adb | 37.0.3; dispositivo `ZD8P7XYXTGCY4D7T` como `device` |
+| JDK | Temurin 17.0.21.1 |
+| Skills | 6 P0 + `graphify` en OpenCode y `~/.agents/skills` |
+| Pruebas | 378/378 |
+
 ## Cómo se compiló e instaló
 
 - SDK .NET 10.0.100 local + workload `maui-android`.
