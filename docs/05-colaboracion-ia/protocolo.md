@@ -12,6 +12,8 @@
 | Producto/UX/operaciones | Gemini | Flujos, onboarding, hardware, soporte, huecos de producto | No afirmar datos fiscales o de hardware sin validar |
 | Dueño del proyecto | Daniel | Aprueba, prioriza y valida con clientes | — |
 
+Las skills que cada rol debe cargar viven en [`08-agentes/`](../08-agentes/README.md). Son instrucciones versionadas, no documentos de negocio: las sesiones web no las cargan, solo OpenCode/CLI. El catálogo y las reglas de instalación están en [`08-agentes/catalogo-skills.md`](../08-agentes/catalogo-skills.md).
+
 ## Rondas
 
 1. **Decision Brief:** una página con contexto, hechos, decisión, opciones y criterio de aceptación.

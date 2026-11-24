@@ -34,6 +34,7 @@
 - [Cola de preguntas](05-colaboracion-ia/cola-de-preguntas.md)
 - [Ronda 2026-11-23](05-colaboracion-ia/rondas/2026-11-23.md)
 - [Aprobación 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-aprobacion.md)
+- [Ronda de skills 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-skills.md)
 
 ## 06 — Referencias
 
@@ -45,4 +46,12 @@
 
 - [Índice de ADRs](07-decisiones/README.md)
 - [ADR-001 — Tienda V2 incremental](07-decisiones/ADR-001-tienda-v2-incremental.md)
+- [ADR-002 — Catálogo de skills](07-decisiones/ADR-002-catalogo-skills.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
+
+## 08 — Agentes
+
+- [Agentes y skills](08-agentes/README.md)
+- [Catálogo de skills](08-agentes/catalogo-skills.md)
+- [Roles y skills](08-agentes/roles.md)
+- [Changelog de skills](08-agentes/CHANGELOG.md)

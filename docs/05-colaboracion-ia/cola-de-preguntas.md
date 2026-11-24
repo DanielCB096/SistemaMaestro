@@ -8,6 +8,7 @@
 
 | Prioridad | Experto | Pregunta | Decisión que cierra | Estado |
 |---|---|---|---|---|
+| 0 | ChatGPT + Claude + Gemini | Catálogo de skills para los agentes que trabajan el código | Qué skills crear, priorizar y documentar | respondida |
 | 1 | ChatGPT | Guion de venta, objeciones y contrato de piloto | Cómo vender V2 antes y durante el piloto | pendiente |
 | 1 | Claude | Especificación de H1–H4 con pruebas y criterios de aceptación | Qué se implementa primero | pendiente |
 | 2 | Gemini | Flujos de onboarding, venta rápida, corte ciego y soporte | UX mínima vendible | pendiente |
@@ -27,6 +28,18 @@
 ## Aprobación 2026-11-23
 
 Las 7 preguntas de aprobación fueron respondidas por ChatGPT, Claude y Gemini. Resultado: H1 autorizado; precios y piloto quedan condicionados a validación real. Ver [`rondas/2026-11-23-aprobacion.md`](rondas/2026-11-23-aprobacion.md).
+
+## Skills 2026-11-23
+
+La ronda de skills fue respondida por ChatGPT, Claude y Gemini. Resultado: catálogo de 6 P0, 4 P1 de ejecución, 2 documentos de contexto y 1 herramienta. Ver [`rondas/2026-11-23-skills.md`](rondas/2026-11-23-skills.md) y [`08-agentes/catalogo-skills.md`](../08-agentes/catalogo-skills.md).
+
+Próximas preguntas derivadas:
+
+| Experto | Pregunta | Decisión que cierra | Estado |
+|---|---|---|---|
+| Claude | Revisar las 6 skills P0 contra el código real | Si las reglas son verificables | pendiente |
+| Gemini | Validar los flujos de mostrador de `pos-ux` | Si la UX mínima es vendible | pendiente |
+| ChatGPT | Convertir `producto-piloto` en guion y checklist comercial | Oferta y piloto | pendiente |
 
 | Pregunta | Estado |
 |---|---|

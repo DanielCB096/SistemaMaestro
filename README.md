@@ -18,6 +18,8 @@ Repositorio de diseño, decisiones y evolución de la plataforma modular para pe
 | [Modelo de documentos, pagos y caja](docs/02-arquitectura/modelo-documentos-pagos-caja.md) | Diseño conceptual del núcleo financiero y correcciones al modelo propuesto |
 | [Protocolo de colaboración con IA](docs/05-colaboracion-ia/protocolo.md) | Roles de ChatGPT, Claude, Gemini y DeepSeek; rondas, reglas y ADRs |
 | [Resumen de la ronda del 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23.md) | Qué aportó cada experto y qué cambió en el plan |
+| [Catálogo de skills](docs/08-agentes/catalogo-skills.md) | Skills P0/P1/P2, dueños, disparadores y criterios de aceptación |
+| [Ronda de skills 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23-skills.md) | Propuestas de ChatGPT, Claude y Gemini y catálogo consolidado |
 | [H1 implementado](docs/06-referencias/h1-respaldo-restauracion.md) | Respaldo, restauración, WAL e instancia única; rama y commit |
 | [Plantilla de ADR](docs/07-decisiones/ADR-000-plantilla.md) | Formato para registrar decisiones arquitectónicas |
 
@@ -35,7 +37,8 @@ SistemaMaestro/
 │  ├─ 04-operacion/            hardware, actualizaciones, CFDI y soporte
 │  ├─ 05-colaboracion-ia/      protocolo y resúmenes de rondas
 │  ├─ 06-referencias/          perfiles de tienda y gym-dotnet
-│  └─ 07-decisiones/           ADRs
+│  ├─ 07-decisiones/           ADRs
+│  └─ 08-agentes/              skills, roles y catálogo de agentes
 └─ (código futuro)
 ```
 
@@ -57,6 +60,7 @@ SistemaMaestro/
 - [x] Piloto después de H4; fecha condicionada a puertas de calidad, no a calendario.
 - [x] CFDI como extensión futura y V2 sin timbrado.
 - [x] Autorizado el inicio de H1 (respaldo/restauración/exportación) en `tienda`.
+- [ ] Aprobar el catálogo de skills de los agentes (ADR-002) y verificar la instalación de las P0.
 
 ## Referencias externas
 

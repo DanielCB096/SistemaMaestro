@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-23 — Skills de los agentes y graphify
+
+- Se consulta a ChatGPT, Claude y Gemini sobre el catálogo de skills para los agentes que trabajan el código; se guardan las respuestas completas en `docs/05-colaboracion-ia/rondas/2026-11-23-skills/`.
+- Se consolida el catálogo en `docs/08-agentes/catalogo-skills.md`: 6 skills P0, 4 P1 de ejecución, 2 documentos de contexto y 1 herramienta.
+- Se crean las 6 skills P0 en `docs/08-agentes/skills/`: `protocolo-de-cambio`, `sqlite-local`, `dinero-y-reglas-caja`, `testing-dotnet`, `seguridad-permisos` y `backup-recovery`.
+- Se agrega `ADR-002 — Catálogo de skills` en estado propuesto.
+- Se instala `graphify` en OpenCode y se genera el grafo AST de `tienda` (2,531 nodos, 8,160 aristas, 124 comunidades).
+- Se documenta que las sesiones web de ChatGPT, Claude y Gemini no cargan skills locales; usan el catálogo como contexto.
+- Se corrige el estado de H1: el job de pruebas pasó, pero el job MAUI falló en “Compilar para Windows” (run `45293159856`); la rama sigue sin fusionar y sin PR.
+
 ## 2026-11-23 — Documentación inicial
 
 - Se crea el repositorio de diseño `SistemaMaestro`.
