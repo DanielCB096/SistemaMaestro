@@ -2,7 +2,7 @@
 
 **Objeto:** definir el criterio de aceptación manual de H1 y contrastarlo con una ejecución real en Windows.  
 **Participantes:** ChatGPT (producto/negocio), Claude (arquitectura/riesgo), Gemini (UX/operaciones) y DeepSeek (ejecución).  
-**Resultado:** el núcleo de H1 en Windows pasa; Android, otro equipo físico, corte de energía y prueba con un dueño no técnico quedan pendientes. Se encontró y corrigió un fallo real de exportación cuando `Documentos` no es escribible.
+**Resultado:** el núcleo de H1 en Windows pasa; Android, otro equipo físico, corte de energía y prueba con un dueño no técnico quedan como deuda post-merge. Se encontró y corrigió un fallo real de exportación cuando `Documentos` no es escribible. **H1 mergeado a `main` en `41c5983` (PR #40).**
 
 ## Lo que pidieron los expertos
 

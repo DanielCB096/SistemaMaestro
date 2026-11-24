@@ -1,16 +1,17 @@
 # H1 — Respaldo, restauración y confiabilidad local
 
-**Estado:** implementado; **CI en verde**; **PR #40 abierta**; verificación manual de Windows aprobada en su núcleo, pendiente Android, otro equipo y corte de energía.  
+**Estado:** **mergeado a `main`** (PR #40); CI de código en verde; verificación manual de Windows aprobada en su núcleo; pendientes Android, otro equipo y corte de energía como deuda post-merge.  
 **Repositorio:** `DanielCB096/tienda`  
-**Rama:** `feat/h1-respaldo-restauracion`  
-**Commit:** `7c7c9a6` (documentación); verificación en `f748af8`; corrección de exportación en `546900f`; corrección de CI en `10fb923`; implementación en `4e89fe0`  
+**Rama:** `main` (merge de `feat/h1-respaldo-restauracion`)  
+**Commit:** `84dc8e1` (documentación del merge); merge en `41c5983`; verificación en `f748af8`; corrección de exportación en `546900f`; implementación en `4e89fe0`  
 **Fecha:** 2026-11-23  
-**Estado detallado:** `SistemaTienda/docs/estado-h1.md` en la rama  
+**Estado detallado:** `SistemaTienda/docs/estado-h1.md` en `main`  
 **Ronda de verificación:** [2026-11-23-verificacion-h1](../05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md)  
 **CI original:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>  
 **CI fallido:** run `45293159856` (commit `8a4fe0c`), `CS0234` en `AjustesPage.xaml.cs`.  
 **CI corregido:** <https://github.com/DanielCB096/tienda/actions/runs/45301168757> (commit `7e09cb7`), ambos jobs en verde.  
-**CI final de código:** <https://github.com/DanielCB096/tienda/actions/runs/45320190550> (commit `f748af8`), ambos jobs en verde.
+**CI final de código:** <https://github.com/DanielCB096/tienda/actions/runs/45320190550> (commit `f748af8`), ambos jobs en verde.  
+**CI de `main`:** run de `41c5983` en curso al escribir esto; `84dc8e1` es solo documentación.
 
 ## Corrección de CI MAUI (`10fb923`)
 
@@ -89,17 +90,17 @@ En este equipo `C:\Users\PC\Documents` no permite crear archivos: `Directory.Cre
 | Android A1–A3 | **PENDIENTE** (sin dispositivo/emulador) |
 | Otro equipo físico | **PENDIENTE** |
 
-## Pendiente
+## Pendiente después del merge
 
-- Probar Android: exportar por compartir, restaurar y abrir.
+- Probar Android: exportar por compartir, restaurar y abrir. **Android no se ofrece a clientes hasta completar esta prueba.**
 - Restaurar en otro equipo físico.
 - Simular corte de energía en venta y en respaldo.
 - Probar el ciclo con un dueño no técnico, sin ayuda verbal.
-- Confirmar el CI de `546900f`/`f748af8` y hacer el merge de la PR #40.
+- Actualizar `docs/changelog.md`, `docs/roadmap.md` y `docs/deuda-tecnica.md` de `tienda` cuando pase la verificación completa.
 
-## PR
+## Merge
 
-- **PR #40:** <https://github.com/DanielCB096/tienda/pull/40>
-- Abierta desde la cuenta propietaria en el navegador interno de OpenCode.
+- **PR #40:** <https://github.com/DanielCB096/tienda/pull/40> — **merged**.
+- **Merge commit:** `41c5983`.
 - Base `main`, head `feat/h1-respaldo-restauracion`.
-- El CI del PR se dispara al abrirla; los runs de push ya estaban en verde.
+- La deuda post-merge queda documentada: Android, otro equipo, corte de energía y prueba con dueño no técnico.

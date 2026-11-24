@@ -61,6 +61,7 @@ SistemaMaestro/
 - [x] Piloto después de H4; fecha condicionada a puertas de calidad, no a calendario.
 - [x] CFDI como extensión futura y V2 sin timbrado.
 - [x] Autorizado el inicio de H1 (respaldo/restauración/exportación) en `tienda`.
+- [x] H1 mergeado a `main` (PR #40, `41c5983`); deuda post-merge: Android, otro equipo, corte de energía y prueba con dueño no técnico.
 - [ ] Aprobar el catálogo de skills de los agentes (ADR-002) y verificar la instalación de las P0.
 
 ## Referencias externas

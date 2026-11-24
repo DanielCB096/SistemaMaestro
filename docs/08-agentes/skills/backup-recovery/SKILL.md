@@ -24,8 +24,8 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
   - WAL, `busy_timeout=30000`, `synchronous=NORMAL` e instancia única en Windows.
   - Conexiones de respaldo sin pooling.
   - Exportar, restaurar y paquete de soporte visibles solo para el dueño; restauración valida `Configurar` en el servicio.
-- La suite de H1 quedó en 376 pruebas; CI en verde en los runs `45301168757`, `45301104936` y `45302432719`. El CI de `546900f`/`f748af8` queda pendiente de confirmar.
-- Verificación manual Windows: W1–W5 y W8 pasan. Android, otro equipo físico, corte de energía y prueba con dueño no técnico siguen pendientes.
+- La suite de H1 quedó en 376 pruebas; CI en verde en los runs `45301168757`, `45320190550` y `45321147708`. H1 está **mergeado a `main`** en `41c5983` (PR #40).
+- Verificación manual Windows: W1–W5 y W8 pasan. Android, otro equipo físico, corte de energía y prueba con dueño no técnico quedan como deuda post-merge.
 - El cifrado de respaldos es parte de H2, no de H1.
 
 ## Cuándo se activa
@@ -91,10 +91,10 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 
 ## Pendientes de H1 que afectan esta skill
 
-- CI en verde para `0ca16ef`; pendiente confirmar `546900f`/`f748af8`.
+- CI en verde para `f748af8`; H1 mergeado en `41c5983`.
 - Verificación manual Windows: W1–W5 y W8 pasan.
-- Android, otro equipo físico y corte de energía: pendientes.
-- PR [#40](https://github.com/DanielCB096/tienda/pull/40) abierta; pendiente merge tras CI y verificación completa.
+- Android, otro equipo físico y corte de energía: pendientes post-merge.
+- PR [#40](https://github.com/DanielCB096/tienda/pull/40) **merged**; deuda post-merge documentada.
 
 ## Referencias
 

@@ -1,5 +1,10 @@
 # Changelog de agentes y skills
 
+## 2026-11-23 — v1.2 `backup-recovery`
+
+- H1 mergeado a `main` (PR #40, `41c5983`).
+- Se documenta la deuda post-merge: Android, otro equipo físico, corte de energía y prueba con dueño no técnico.
+
 ## 2026-11-23 — v1.1 `backup-recovery`
 
 - Se documenta el fallback de exportación a Escritorio/Descargas cuando Documentos no es escribible.
