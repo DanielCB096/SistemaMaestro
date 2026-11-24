@@ -14,7 +14,7 @@
 | P4 | Acceso de colaborador en GitHub | Media | La cuenta de Edge no puede abrir PR (`must be a collaborator`); se usó fast-forward | Agregar la cuenta a `DanielCB096/tienda` como colaboradora o usar una cuenta con permiso | Se puede abrir y mergear una PR de prueba sin fast-forward |
 | P5 | Iniciar H2 | Media | Siguiente hito del plan, no bloquea H1 | Permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados | H2 cumple sus pruebas y CI; ver plan maestro |
 | P6 | Ruta de respaldo accionable | **Completado** | `fix/p3-respaldo-ruta` (`53a35fe`, fusionada en `290cde6`): copiar ruta, abrir carpeta y respaldos recientes | Verificado en Windows: la ruta se copia, la carpeta se abre y la restauración desde la lista cierra la app y crea `antes-restaurar` | El usuario llega a la carpeta o restaura sin navegar a mano |
-| P7 | QR del ticket no escaneable | **Implementado; falta escaneo físico** | `fix/ticket-qr-escaneo` (`28f66e4`, ya en `tienda/main`): contenido reducido a 49 módulos y QR mostrado como imagen de 240 dp | Verificado con `pyzbar` desde una captura de pantalla y desde el PNG; falta la cámara de un teléfono | El QR se escanea desde pantalla y desde PNG compartido |
+| P7 | QR del ticket no escaneable | **Completado** | `fix/ticket-qr-escaneo` (`28f66e4`, ya en `tienda/main`): contenido reducido a 49 módulos y QR mostrado como imagen de 240 dp | Verificado con `pyzbar` desde captura y **escaneado con un teléfono real desde la pantalla** el 2026-11-24 | El QR se escanea desde pantalla y desde PNG compartido |
 | P8 | Búsqueda dinámica en POS | **Completado** | `feat/pos-busqueda-dinamica` (`c57fef0`, fusionada en `main` `c57fef0`): `SugerirProductos` con debounce de 250 ms y hasta 8 coincidencias | Verificado en Windows: sugerencias al escribir, orden por prefijo, escaneo intacto, stock 0 conserva lista y 7 pruebas nuevas (389 en total) | El cajero encuentra y agrega el producto sin paso extra |
 
 ### P7 — QR del ticket
@@ -27,7 +27,7 @@ El 2026-11-24 se cambió el QR en `fix/ticket-qr-escaneo` (`28f66e4`, CI `454794
 
 Evidencia: el PNG y una captura de pantalla de 258×258 px se decodificaron con `pyzbar` y devolvieron el resumen esperado.
 
-**Falta:** pedir a una persona que escanee el QR desde la pantalla y desde el PNG compartido con un teléfono Android. Si falla, revisar distancia, brillo y tamaño de pantalla antes de tocar el código.
+**Resultado:** un teléfono real escaneó el QR desde la pantalla maximizada y devolvió el resumen esperado (`Venta: #22 · Total: $13.00 · Efectivo`). P7 queda cerrado. Opcional: repetirlo con un segundo teléfono de otra marca.
 
 ## Detalle de P2 — corte de energía
 

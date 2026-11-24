@@ -51,11 +51,10 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
-- **Pendientes post-H1:** otro equipo/tablet, corte de energía real y acceso de colaborador en GitHub. P3 (dueño no técnico) **completado** el 2026-11-24; **P6 (ruta de respaldo)** cerrado en `fix/p3-respaldo-ruta` (`53a35fe`, fusionado en `tienda/main` `290cde6`); **P8 (búsqueda dinámica)** cerrado en `feat/pos-busqueda-dinamica` (`c57fef0`, ya en `tienda/main`); **P7 (QR)** implementado en `fix/ticket-qr-escaneo` (`28f66e4`, ya en `tienda/main`), verificado con `pyzbar` y pendiente el escaneo con un teléfono físico. Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
+- **Pendientes post-H1:** otro equipo/tablet, corte de energía real y acceso de colaborador en GitHub. P3 (dueño no técnico) **completado** el 2026-11-24; **P6 (ruta de respaldo)** cerrado en `53a35fe` (`main` `290cde6`); **P8 (búsqueda dinámica)** en `c57fef0`; **P7 (QR)** en `28f66e4` y **escaneado con un teléfono real**. Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md). Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
 - **Datos de prueba:** `tienda` incluye `SistemaTienda.Semilla` con escenarios `limpio`, `configurado` y `demo`; `scripts/p3-preparar.ps1 -Semilla` los aplica a la app aislada. `limpio` sigue siendo el valor por defecto para P3.
 
 ## Siguiente paso
 
-1. Cerrar **P7 (QR del ticket)** y **P8 (búsqueda dinámica en POS)**, los dos hallazgos de P3 que faltan.
-2. Cerrar los pendientes de campo de [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía y acceso de colaborador.
-3. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
+1. Cerrar los pendientes de campo de [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía y acceso de colaborador.
+2. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
