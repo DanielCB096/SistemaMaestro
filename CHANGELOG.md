@@ -7,7 +7,7 @@
 - `VerCostos` es por usuario: el dueño lo concede a un encargado desde **Ajustes → Usuarios y PIN**. Sin él, el encargado no ve costos, utilidad ni la pestaña Reportes.
 - Exportar CSV/PDF exige `ExportarDatos`; los reportes con costo exigen además `VerCostos`.
 - Las pestañas se arman por permiso: el empleado solo ve Inicio, Vender, Inventario, Ventas y Ajustes.
-- 13 pruebas nuevas (matriz y manifiesto de métodos públicos); 403 en total.
+- 13 pruebas nuevas (matriz y manifiesto de métodos públicos); 403 en total. CI en verde (run `45496679264`) y fusionada a `main` (`881bfc8`).
 
 ## 2026-11-24 — QR del ticket legible (P7)
 
