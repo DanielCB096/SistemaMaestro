@@ -50,7 +50,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Corrección Android:** `fix/android-soporte-cache`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Fusionada a `main` por fast-forward (`84dc8e1..67af2a5`) porque la cuenta de Edge no puede abrir PR (`must be a collaborator`).
 - **Advertencia conocida:** 2 `CS0169` en Android por campos de `InstanciaUnica` usados solo en Windows; no afectan ejecución ni CI.
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
-- **Graphify:** pendiente de instalar (`pip install graphifyy`); el grafo de `tienda` no se versiona.
+- **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
 
 ## Siguiente paso
 
