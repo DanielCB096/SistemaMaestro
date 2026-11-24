@@ -48,12 +48,11 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Verificación manual Windows:** W1–W5 y W8 pasan.
 - **Verificación manual Android:** **PASA**. Exportar, restaurar, paquete sin base y paquete con base verificados en POCO X6 Pro 5G / Android 16. Evidencia en [`docs/06-referencias/h1-android.md`](docs/06-referencias/h1-android.md).
 - **Corrección Android:** `fix/android-soporte-cache`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Fusionada a `main` por fast-forward (`84dc8e1..67af2a5`) porque la cuenta de Edge no puede abrir PR (`must be a collaborator`).
-- **Advertencia conocida:** 2 `CS0169` en Android por campos de `InstanciaUnica` usados solo en Windows; no afectan ejecución ni CI.
+- **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
 
 ## Siguiente paso
 
 1. Probar en otro equipo físico/tablet, corte de energía y dueño no técnico.
-2. Mover los campos de `InstanciaUnica` dentro de `#if WINDOWS` para dejar 0 advertencias en Android.
-3. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
+2. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.

@@ -3,10 +3,11 @@
 **Fecha:** 2026-11-24  
 **Dispositivo:** POCO X6 Pro 5G (`2311DRK48G`), Android 16, HyperOS 3.0, arm64-v8a.  
 **App de prueba:** `com.sistematienda.verificacionh1` (separada de la app real).  
-**Rama:** `fix/android-soporte-cache` en `tienda` (commit `67af2a5`).  
+**Rama:** `fix/android-soporte-cache` en `tienda` (commit `67af2a5`); limpieza de advertencias en `chore/instancia-unica-warnings` (`82aa23e`).  
 **Pruebas:** 378/378 en verde.  
 **CI de la rama:** run `45424725218`, ambos jobs en verde (Windows y Android).  
-**Resultado:** **PASA** el paquete de soporte sin base y con base. Rama fusionada a `main` por fast-forward (`84dc8e1..67af2a5`).
+**CI de la limpieza:** run `45442442966`, ambos jobs en verde.  
+**Resultado:** **PASA** el paquete de soporte sin base y con base. Ramas fusionadas a `main` por fast-forward (`84dc8e1..67af2a5..82aa23e`).
 
 > La creación de la PR desde el navegador falló con `Validation failed: must be a collaborator` porque la cuenta abierta en Edge no es colaboradora del repositorio. El cambio se integró por fast-forward después de confirmar el CI verde.
 
@@ -93,14 +94,13 @@ Con base:
 
 ## Nota de compilación
 
-La compilación Android emite dos advertencias `CS0169` por los campos `InstanciaUnica._mutex` y `_creada`, que solo se usan bajo `#if WINDOWS`. No afectan la ejecución ni el CI. Se pueden mover dentro del bloque `#if WINDOWS` en una limpieza posterior.
+La compilación Android quedó en **0 advertencias y 0 errores** después de mover `InstanciaUnica._mutex` y `_creada` dentro de `#if WINDOWS` (`82aa23e`). El build local tardó 5:07 min y el CI pasó Windows y Android.
 
 ## Pendiente post-merge
 
 - Probar en otro equipo físico y en una tablet.
 - Corte de energía durante venta, respaldo y migración.
 - Prueba con un dueño no técnico.
-- Mover los campos de `InstanciaUnica` dentro de `#if WINDOWS` para dejar 0 advertencias en Android.
 - Iniciar H2: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
 
 ## Enlaces
