@@ -1,6 +1,6 @@
 # H1 — Respaldo, restauración y confiabilidad local
 
-**Estado:** implementado en rama; **CI en verde**; pendiente verificación manual y PR.  
+**Estado:** implementado en rama; **CI en verde**; **PR #40 abierta**; pendiente verificación manual y merge.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `feat/h1-respaldo-restauracion`  
 **Commit:** `0ca16ef` (estado final); corrección de CI en `10fb923`; implementación en `4e89fe0`  
@@ -64,10 +64,12 @@
 - Restaurar en otro dispositivo.
 - Probar dos instancias en Windows.
 - Confirmar que el paquete de soporte no se comparte sin consentimiento.
-- Abrir la PR desde una cuenta colaboradora (la cuenta de Edge no tiene permiso).
+- Confirmar los checks de la PR #40 y hacer el merge cuando la verificación manual pase.
 
-## Nota sobre la PR
+## PR
 
-La rama se subió correctamente. La creación de la PR desde el navegador falló porque la cuenta iniciada en Edge no es colaboradora del repositorio (`Validation failed: must be a collaborator`). La PR puede abrirse desde la cuenta propietaria en:
-
-<https://github.com/DanielCB096/tienda/pull/new/feat/h1-respaldo-restauracion>
+- **PR #40:** <https://github.com/DanielCB096/tienda/pull/40>
+- Abierta desde la cuenta propietaria en el navegador interno de OpenCode.
+- Base `main`, head `feat/h1-respaldo-restauracion`.
+- 5 commits, 17 archivos, +745/−6.
+- El CI del PR se dispara al abrirla; los runs de push ya estaban en verde.

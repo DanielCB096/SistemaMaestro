@@ -95,7 +95,7 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 - Restauración en otro dispositivo.
 - Prueba de dos instancias.
 - Confirmar que el paquete de soporte no se comparte sin consentimiento.
-- Abrir la PR desde una cuenta colaboradora.
+- PR [#40](https://github.com/DanielCB096/tienda/pull/40) abierta; pendiente merge tras la verificación manual.
 
 ## Referencias
 

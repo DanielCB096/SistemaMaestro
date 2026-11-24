@@ -10,6 +10,7 @@
 - Se documenta que las sesiones web de ChatGPT, Claude y Gemini no cargan skills locales; usan el catálogo como contexto.
 - Se corrige el estado de H1: el job de pruebas pasó, pero el job MAUI falló en “Compilar para Windows” (run `45293159856`); la rama sigue sin fusionar y sin PR.
 - Se corrige el fallo de compilación MAUI de H1 en `10fb923`: `Application.Current` ambiguo con `SistemaTienda.Application`; verificado en local con Windows y 373/373 pruebas. CI confirmado en verde en los runs `45301168757`, `45301104936` y `45302432719` (Windows y Android).
+- Se abre la PR #40 de H1: <https://github.com/DanielCB096/tienda/pull/40>. Queda pendiente la verificación manual y el merge.
 
 ## 2026-11-23 — Documentación inicial
 
