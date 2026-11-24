@@ -51,8 +51,9 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
+- **Pendientes post-H1:** otro equipo/tablet, corte de energía real, dueño no técnico y acceso de colaborador en GitHub. Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
 
 ## Siguiente paso
 
-1. Probar en otro equipo físico/tablet, corte de energía y dueño no técnico.
+1. Cerrar los pendientes post-H1 anotados en [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía, dueño no técnico y acceso de colaborador.
 2. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.

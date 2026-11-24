@@ -49,3 +49,4 @@
 - **Verificación Android completada (2026-11-24):** exportar respaldo, restaurar, paquete sin base y paquete con base pasan en POCO X6 Pro 5G / Android 16. Corrección `fix/android-soporte-cache` (`67af2a5`, 378/378 pruebas, CI verde) fusionada a `main` por fast-forward. Evidencia en `docs/06-referencias/h1-android.md`.
 - **Entorno de agentes:** 6 skills P0 + graphify instaladas en OpenCode y `~/.agents/skills`; SDK .NET 10.0.100 local con `maui-android`, Android SDK 36, platform-tools y JDK 17.
 - **Limpieza Android:** `chore/instancia-unica-warnings` (`82aa23e`) deja la compilación Android en 0 advertencias; 378/378 pruebas y CI verde (run `45442442966`). Fusionada a `main`.
+- **Pendientes post-H1 anotados:** otro equipo/tablet, corte de energía real, dueño no técnico y acceso de colaborador en GitHub. Ver `docs/09-pendientes/h1-post-merge.md`.

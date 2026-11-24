@@ -58,3 +58,7 @@
 - [Catálogo de skills](08-agentes/catalogo-skills.md)
 - [Roles y skills](08-agentes/roles.md)
 - [Changelog de skills](08-agentes/CHANGELOG.md)
+
+## 09 — Pendientes
+
+- [Pendientes post-H1](09-pendientes/h1-post-merge.md)
