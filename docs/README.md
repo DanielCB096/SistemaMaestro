@@ -49,6 +49,7 @@
 - [Índice de ADRs](07-decisiones/README.md)
 - [ADR-001 — Tienda V2 incremental](07-decisiones/ADR-001-tienda-v2-incremental.md)
 - [ADR-002 — Catálogo de skills](07-decisiones/ADR-002-catalogo-skills.md)
+- [ADR-003 — Matriz de permisos por acción](07-decisiones/ADR-003-permisos-accion.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-24 — H2.1: permisos por acción
+
+- Se implementa la matriz del [ADR-003](docs/07-decisiones/ADR-003-permisos-accion.md) en `tienda`, rama `feat/h2-permisos-accion`.
+- `AgregarClienteFiado` y `AgregarProveedor` ahora exigen permiso; se cierra el hueco que permitía a un empleado crear registros llamando al servicio.
+- `VerCostos` es por usuario: el dueño lo concede a un encargado desde **Ajustes → Usuarios y PIN**. Sin él, el encargado no ve costos, utilidad ni la pestaña Reportes.
+- Exportar CSV/PDF exige `ExportarDatos`; los reportes con costo exigen además `VerCostos`.
+- Las pestañas se arman por permiso: el empleado solo ve Inicio, Vender, Inventario, Ventas y Ajustes.
+- 13 pruebas nuevas (matriz y manifiesto de métodos públicos); 403 en total.
+
 ## 2026-11-24 — QR del ticket legible (P7)
 
 - Se corrige el QR en `tienda`, rama `fix/ticket-qr-escaneo` (`28f66e4`): ya no incluye productos, baja de 89×89 a 49×49 módulos y se muestra como imagen de 240 dp.
