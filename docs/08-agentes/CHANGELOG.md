@@ -1,5 +1,11 @@
 # Changelog de agentes y skills
 
+## 2026-11-23 — v1.1 `backup-recovery`
+
+- Se documenta el fallback de exportación a Escritorio/Descargas cuando Documentos no es escribible.
+- Se actualiza el estado: 376 pruebas; verificación manual Windows W1–W5 y W8 pasan.
+- Quedan pendientes Android, otro equipo físico, corte de energía y prueba con dueño no técnico.
+
 ## 2026-11-23 — v1.0
 
 - Se consulta a ChatGPT, Claude y Gemini sobre el catálogo de skills.

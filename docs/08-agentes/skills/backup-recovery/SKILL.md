@@ -18,14 +18,14 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 ## Hechos que debes asumir
 
 - H1 ya implementó:
-  - Respaldo exportable a `Documentos\SistemaTienda` en Windows y diálogo de compartir en Android.
+  - Respaldo exportable a `Documentos\SistemaTienda` en Windows, con fallback a `Escritorio\SistemaTienda` o `Descargas\SistemaTienda` si Documentos no es escribible; diálogo de compartir en Android.
   - Restauración desde Ajustes con confirmación, respaldo previo y cierre de la ventana en Windows.
   - Paquete de soporte con `resumen.txt`, `LEEME.txt` y base opcional.
   - WAL, `busy_timeout=30000`, `synchronous=NORMAL` e instancia única en Windows.
   - Conexiones de respaldo sin pooling.
   - Exportar, restaurar y paquete de soporte visibles solo para el dueño; restauración valida `Configurar` en el servicio.
-- La suite de H1 quedó en 373 pruebas; CI en verde en el run `45301168757`, con Windows y Android compilando.
-- La verificación manual en Windows y Android, la restauración en otro dispositivo y las dos instancias siguen pendientes.
+- La suite de H1 quedó en 376 pruebas; CI en verde en los runs `45301168757`, `45301104936` y `45302432719`. El CI de `546900f`/`f748af8` queda pendiente de confirmar.
+- Verificación manual Windows: W1–W5 y W8 pasan. Android, otro equipo físico, corte de energía y prueba con dueño no técnico siguen pendientes.
 - El cifrado de respaldos es parte de H2, no de H1.
 
 ## Cuándo se activa
@@ -48,6 +48,7 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 8. **Fuera del almacenamiento privado.** El respaldo debe poder salir del dispositivo (Documentos, USB, share).
 9. **Cifrado pendiente.** No prometas respaldos cifrados hasta que H2 los implemente y pruebe.
 10. **No compartir por canales públicos.** El paquete puede contener ventas, clientes y fiados.
+11. **Carpeta escribible.** No asumas que `Documentos` existe o permite escribir; usa `CarpetaExportacion` y reporta la ruta final al usuario.
 
 ## Flujo
 
@@ -90,12 +91,10 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 
 ## Pendientes de H1 que afectan esta skill
 
-- CI en verde (run `45301168757`); Windows y Android compilan.
-- Verificación manual en Windows y Android.
-- Restauración en otro dispositivo.
-- Prueba de dos instancias.
-- Confirmar que el paquete de soporte no se comparte sin consentimiento.
-- PR [#40](https://github.com/DanielCB096/tienda/pull/40) abierta; pendiente merge tras la verificación manual.
+- CI en verde para `0ca16ef`; pendiente confirmar `546900f`/`f748af8`.
+- Verificación manual Windows: W1–W5 y W8 pasan.
+- Android, otro equipo físico y corte de energía: pendientes.
+- PR [#40](https://github.com/DanielCB096/tienda/pull/40) abierta; pendiente merge tras CI y verificación completa.
 
 ## Referencias
 

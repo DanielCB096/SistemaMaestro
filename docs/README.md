@@ -35,6 +35,7 @@
 - [Ronda 2026-11-23](05-colaboracion-ia/rondas/2026-11-23.md)
 - [Aprobación 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-aprobacion.md)
 - [Ronda de skills 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-skills.md)
+- [Verificación manual de H1 2026-11-23](05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md)
 
 ## 06 — Referencias
 

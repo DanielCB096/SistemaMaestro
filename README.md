@@ -20,6 +20,7 @@ Repositorio de diseño, decisiones y evolución de la plataforma modular para pe
 | [Resumen de la ronda del 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23.md) | Qué aportó cada experto y qué cambió en el plan |
 | [Catálogo de skills](docs/08-agentes/catalogo-skills.md) | Skills P0/P1/P2, dueños, disparadores y criterios de aceptación |
 | [Ronda de skills 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23-skills.md) | Propuestas de ChatGPT, Claude y Gemini y catálogo consolidado |
+| [Verificación manual de H1](docs/05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md) | Criterios de las IA y resultados reales en Windows |
 | [H1 implementado](docs/06-referencias/h1-respaldo-restauracion.md) | Respaldo, restauración, WAL e instancia única; rama y commit |
 | [Plantilla de ADR](docs/07-decisiones/ADR-000-plantilla.md) | Formato para registrar decisiones arquitectónicas |
 
