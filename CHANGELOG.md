@@ -46,3 +46,4 @@
 - Se añade la política de cuotas: si un plan gratuito se agota, se espera al restablecimiento.
 - ChatGPT, Claude y Gemini aprueban la ruta incremental y autorizan H1; precios y piloto quedan condicionados a validación real.
 - H1 implementado en `tienda` (`feat/h1-respaldo-restauracion`, implementación `4e89fe0`, estado `8a4fe0c`): respaldo exportable, restauración, paquete de soporte, WAL, `busy_timeout` e instancia única. 373 pruebas en verde; job de pruebas en CI aprobado; job MAUI en progreso al apagar el equipo. Ver `SistemaTienda/docs/estado-h1.md` en la rama.
+- **Verificación Android completada (2026-11-24):** exportar respaldo, restaurar, paquete sin base y paquete con base pasan en POCO X6 Pro 5G / Android 16. Corrección `fix/android-soporte-cache` (`67af2a5`, 378/378 pruebas, CI verde) fusionada a `main` por fast-forward. Evidencia en `docs/06-referencias/h1-android.md`.

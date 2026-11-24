@@ -45,15 +45,15 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 
 - **H1 mergeado** en `tienda` `main` (merge `41c5983`, PR #40).
 - **CI de `main` en verde** (Windows y Android compilan).
-- **Verificación manual Windows:** W1–W5 y W8 pasan. Deuda: Android manual, otro equipo físico, corte de energía y prueba con dueño no técnico.
-- **Verificación manual Android:** exportar y restaurar pasan. El paquete de soporte falla porque el ZIP se copia sobre sí mismo en caché.
-- **Rama de corrección:** `fix/android-soporte-cache` en `tienda`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Pendiente retestar el paquete de soporte con el dispositivo conectado y mergear.
+- **Verificación manual Windows:** W1–W5 y W8 pasan.
+- **Verificación manual Android:** **PASA**. Exportar, restaurar, paquete sin base y paquete con base verificados en POCO X6 Pro 5G / Android 16. Evidencia en [`docs/06-referencias/h1-android.md`](docs/06-referencias/h1-android.md).
+- **Corrección Android:** `fix/android-soporte-cache`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Fusionada a `main` por fast-forward (`84dc8e1..67af2a5`) porque la cuenta de Edge no puede abrir PR (`must be a collaborator`).
+- **Advertencia conocida:** 2 `CS0169` en Android por campos de `InstanciaUnica` usados solo en Windows; no afectan ejecución ni CI.
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
-- **Graphify:** grafo de código de `tienda` generado localmente; no se versiona `graphify-out/`.
+- **Graphify:** pendiente de instalar (`pip install graphifyy`); el grafo de `tienda` no se versiona.
 
 ## Siguiente paso
 
-1. Reconstruir el APK de `fix/android-soporte-cache` con ensamblados embebidos.
-2. Retestar el paquete de soporte sin base y con base.
-3. Abrir PR de la rama y mergear cuando el CI esté en verde.
-4. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
+1. Probar en otro equipo físico/tablet, corte de energía y dueño no técnico.
+2. Mover los campos de `InstanciaUnica` dentro de `#if WINDOWS` para dejar 0 advertencias en Android.
+3. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.

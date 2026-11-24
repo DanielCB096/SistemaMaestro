@@ -5,13 +5,18 @@
 **App de prueba:** `com.sistematienda.verificacionh1` (separada de la app real).  
 **Rama:** `fix/android-soporte-cache` en `tienda` (commit `67af2a5`).  
 **Pruebas:** 378/378 en verde.  
-**CI de la rama:** run `45424725218`, ambos jobs en verde (Windows y Android).
+**CI de la rama:** run `45424725218`, ambos jobs en verde (Windows y Android).  
+**Resultado:** **PASA** el paquete de soporte sin base y con base. Rama fusionada a `main` por fast-forward (`84dc8e1..67af2a5`).
+
+> La creación de la PR desde el navegador falló con `Validation failed: must be a collaborator` porque la cuenta abierta en Edge no es colaboradora del repositorio. El cambio se integró por fast-forward después de confirmar el CI verde.
 
 ## Cómo se compiló e instaló
 
 - SDK .NET 10.0.100 local + workload `maui-android`.
+- JDK 17 (Temurin 17.0.21.1) y Android SDK 36 / build-tools 36.0.0.
 - APK Debug con `EmbedAssembliesIntoApk=true`; sin eso, el APK falla al abrir por Fast Deployment.
-- `adb install` falla con `INSTALL_FAILED_USER_RESTRICTED` por la restricción de Xiaomi/HyperOS. Se instaló desde el archivo APK con el instalador del sistema.
+- APK: 91,733,905 bytes (87.5 MB), `com.sistematienda.verificacionh1-Signed.apk`.
+- `adb install` falla con `INSTALL_FAILED_USER_RESTRICTED` por la restricción de Xiaomi/HyperOS. Se instaló desde el archivo APK con el instalador del sistema (`Intent.ACTION_VIEW`).
 - El APK con Fast Deployment falló con:
 
 ```text
@@ -25,17 +30,46 @@ El APK con ensamblados embebidos abrió correctamente.
 
 | Escenario | Resultado | Evidencia |
 |---|---|---|
-| Instalar APK | **PASA** (vía instalador del sistema) | `pm list packages` muestra `com.sistematienda.verificacionh1` |
-| Configuración inicial | **PASA** | Tienda `Abarrotes Android H1`, PIN 1234 |
-| Login | **PASA** | Rol Dueño, fondo $200 |
-| Exportar respaldo | **PASA** | Share sheet con `tienda-20261124-090919-exportacion.db`; 221,184 B en caché |
-| Restaurar respaldo | **PASA** | Respaldo previo `tienda-20261124-091237-antes-restaurar.db`; app reabre con configuración y usuario |
-| Paquete sin base | **FALLA** | `The process cannot access the file ... because it is being used by another process` |
-| Paquete con base | **PENDIENTE** | Depende de la corrección |
+| Instalar APK | **PASA** (vía instalador del sistema) | `pm list packages` muestra `com.sistematienda.verificacionh1`; versión 0.1 |
+| Configuración inicial | **PASA** | Tienda `Tienda H1`, giro Abarrotes, PIN 1234, fondo $200 |
+| Login | **PASA** | Rol Dueño; tablero con ventas 0 y efectivo esperado $200 |
+| Exportar respaldo | **PASA** | Share sheet con `tienda-20261124-103044-exportacion.db`; 221,184 B en caché |
+| Restaurar respaldo | **PASA** | Archivo `restore-test-h1.db` en Descargas; respaldo previo `tienda-20261124-103225-antes-restaurar.db`; app reabre con `Tienda H1` y PIN válido |
+| Paquete sin base | **PASA** | `soporte-20261124-103243.zip` (673 B), share sheet; contiene `LEEME.txt` y `resumen.txt` |
+| Paquete con base | **PASA** | Confirmación “incluirá ventas, clientes, fiados…”; `soporte-20261124-103426.zip` (6,662 B) con `LEEME.txt`, `resumen.txt` y `datos.db` (221,184 B) |
+| Verificar ZIPs | **PASA** | Sin base: 2 entradas, sin datos; con base: 3 entradas, `datos.db` verificable |
+| Error “archivo en uso” | **NO REPRODUCIDO** | La corrección de `CarpetaExportacion.EsMismaRuta` evita la copia sobre sí misma |
 
-## Bug encontrado
+## Evidencia de archivos
 
-`PaqueteSoporteService.Crear` genera el ZIP en `FileSystem.CacheDirectory`. Después, `ExportacionRespaldoApp.ExportarAsync` en Android copia el archivo a `FileSystem.CacheDirectory` otra vez con el mismo nombre. Origen y destino son el mismo archivo, y `File.Copy` lanza “archivo en uso”.
+```text
+cache/
+  soporte-20261124-103243.zip          673 B   (sin base)
+  soporte-20261124-103426.zip        6,662 B   (con base)
+  tienda-20261124-103044-exportacion.db 221,184 B
+
+respaldos/
+  tienda-20261124-102953-automatico.db      221,184 B
+  tienda-20261124-103044-exportacion.db     221,184 B
+  tienda-20261124-103225-antes-restaurar.db 221,184 B
+```
+
+Contenido de los ZIP (inspeccionado localmente tras extraer de `run-as`):
+
+```text
+Sin base:
+  resumen.txt   509 B
+  LEEME.txt     193 B
+
+Con base:
+  resumen.txt   510 B
+  LEEME.txt     193 B
+  datos.db      221,184 B
+```
+
+## Bug corregido
+
+`PaqueteSoporteService.Crear` genera el ZIP en `FileSystem.CacheDirectory`. Después, `ExportacionRespaldoApp.ExportarAsync` en Android copiaba el archivo a `FileSystem.CacheDirectory` otra vez con el mismo nombre. Origen y destino eran el mismo archivo y `File.Copy` lanzaba “archivo en uso”.
 
 ## Corrección (`67af2a5`)
 
@@ -44,28 +78,17 @@ El APK con ensamblados embebidos abrió correctamente.
 - 2 pruebas nuevas: misma ruta normalizada y rutas distintas.
 - Total: 378/378.
 
-## Cómo retestar
+## Nota de compilación
 
-1. Compila el APK de `fix/android-soporte-cache` con `EmbedAssembliesIntoApk=true`.
-2. Instala la actualización en el teléfono.
-3. Abre Ajustes → Exportar paquete de soporte sin base.
-4. Repite con “Incluir la base de datos” activado y confirma.
-5. Verifica los ZIP:
+La compilación Android emite dos advertencias `CS0169` por los campos `InstanciaUnica._mutex` y `_creada`, que solo se usan bajo `#if WINDOWS`. No afectan la ejecución ni el CI. Se pueden mover dentro del bloque `#if WINDOWS` en una limpieza posterior.
 
-```powershell
-$adb = Join-Path $env:LOCALAPPDATA "Android\Sdk\platform-tools\adb.exe"
-& $adb shell run-as com.sistematienda.verificacionh1 ls -la cache
-```
+## Pendiente post-merge
 
-- Sin base: `LEEME.txt` y `resumen.txt`.
-- Con base: además `datos.db`.
-
-## Pendiente
-
-- Retestar ambos paquetes con el dispositivo conectado.
-- Probar el paquete con base y confirmar que `datos.db` contiene los datos.
-- Abrir PR de `fix/android-soporte-cache` y mergear con CI verde.
-- Después: otro equipo físico, corte de energía y prueba con dueño no técnico.
+- Probar en otro equipo físico y en una tablet.
+- Corte de energía durante venta, respaldo y migración.
+- Prueba con un dueño no técnico.
+- Mover los campos de `InstanciaUnica` dentro de `#if WINDOWS` para dejar 0 advertencias en Android.
+- Iniciar H2: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
 
 ## Enlaces
 

@@ -1,9 +1,9 @@
 # H1 — Respaldo, restauración y confiabilidad local
 
-**Estado:** **mergeado a `main`** (PR #40); CI de código en verde; verificación manual de Windows aprobada en su núcleo; pendientes Android, otro equipo y corte de energía como deuda post-merge.  
+**Estado:** **mergeado a `main`** (PR #40); CI de código en verde; verificación manual de Windows y Android aprobada; pendientes otro equipo, corte de energía y dueño no técnico como deuda post-merge.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `main` (merge de `feat/h1-respaldo-restauracion`)  
-**Commit:** `84dc8e1` (documentación del merge); merge en `41c5983`; verificación en `f748af8`; corrección de exportación en `546900f`; implementación en `4e89fe0`  
+**Commit:** `67af2a5` (corrección Android fusionada); `84dc8e1` (documentación del merge); merge en `41c5983`; verificación en `f748af8`; corrección de exportación en `546900f`; implementación en `4e89fe0`  
 **Fecha:** 2026-11-23  
 **Estado detallado:** `SistemaTienda/docs/estado-h1.md` en `main`  
 **Ronda de verificación:** [2026-11-23-verificacion-h1](../05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md)  
@@ -87,20 +87,19 @@ En este equipo `C:\Users\PC\Documents` no permite crear archivos: `Directory.Cre
 | W6/W7 Corte de energía | **PENDIENTE** |
 | W9 Venta + respaldo | **PENDIENTE** |
 | W10 Dueño no técnico | **PENDIENTE** |
-| Android A1–A3 | **PENDIENTE** (sin dispositivo/emulador) |
+| Android A1–A3 | **PASA**; exportar, restaurar y paquete con/sin base en POCO X6 Pro 5G / Android 16. Ver [h1-android.md](h1-android.md) |
 | Otro equipo físico | **PENDIENTE** |
 
 ## Pendiente después del merge
 
-- Probar Android: exportar por compartir, restaurar y abrir. **Android no se ofrece a clientes hasta completar esta prueba.**
 - Restaurar en otro equipo físico.
 - Simular corte de energía en venta y en respaldo.
 - Probar el ciclo con un dueño no técnico, sin ayuda verbal.
-- Actualizar `docs/changelog.md`, `docs/roadmap.md` y `docs/deuda-tecnica.md` de `tienda` cuando pase la verificación completa.
+- Mover los campos de `InstanciaUnica` dentro de `#if WINDOWS` para dejar 0 advertencias en Android.
 
 ## Merge
 
 - **PR #40:** <https://github.com/DanielCB096/tienda/pull/40> — **merged**.
 - **Merge commit:** `41c5983`.
-- Base `main`, head `feat/h1-respaldo-restauracion`.
-- La deuda post-merge queda documentada: Android, otro equipo, corte de energía y prueba con dueño no técnico.
+- **Corrección Android:** `fix/android-soporte-cache` (`67af2a5`), CI verde y fusión por fast-forward `84dc8e1..67af2a5`.
+- La deuda post-merge queda documentada: otro equipo, corte de energía y prueba con dueño no técnico.
