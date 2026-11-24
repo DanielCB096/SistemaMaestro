@@ -4,7 +4,8 @@
 **Dispositivo:** POCO X6 Pro 5G (`2311DRK48G`), Android 16, HyperOS 3.0, arm64-v8a.  
 **App de prueba:** `com.sistematienda.verificacionh1` (separada de la app real).  
 **Rama:** `fix/android-soporte-cache` en `tienda` (commit `67af2a5`).  
-**Pruebas:** 378/378 en verde.
+**Pruebas:** 378/378 en verde.  
+**CI de la rama:** run `45424725218`, ambos jobs en verde (Windows y Android).
 
 ## Cómo se compiló e instaló
 

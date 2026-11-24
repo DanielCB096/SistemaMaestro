@@ -47,7 +47,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **CI de `main` en verde** (Windows y Android compilan).
 - **Verificación manual Windows:** W1–W5 y W8 pasan. Deuda: Android manual, otro equipo físico, corte de energía y prueba con dueño no técnico.
 - **Verificación manual Android:** exportar y restaurar pasan. El paquete de soporte falla porque el ZIP se copia sobre sí mismo en caché.
-- **Rama de corrección:** `fix/android-soporte-cache` en `tienda`, commit `67af2a5`, 378/378 pruebas. Pendiente reconstruir APK y retestar el paquete de soporte con el dispositivo conectado.
+- **Rama de corrección:** `fix/android-soporte-cache` en `tienda`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Pendiente retestar el paquete de soporte con el dispositivo conectado y mergear.
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** grafo de código de `tienda` generado localmente; no se versiona `graphify-out/`.
 

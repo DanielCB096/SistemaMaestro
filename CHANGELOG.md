@@ -6,7 +6,7 @@
   - Exportar respaldo: **pasa** (share sheet + archivo en caché).
   - Restaurar respaldo: **pasa** (respaldo previo y datos conservados).
   - Paquete de soporte: **falla** porque el ZIP se copia sobre sí mismo en caché.
-- Corrección en `tienda`, rama `fix/android-soporte-cache` (`67af2a5`): `CarpetaExportacion.EsMismaRuta` evita la autocopia. 378/378 pruebas.
+- Corrección en `tienda`, rama `fix/android-soporte-cache` (`67af2a5`): `CarpetaExportacion.EsMismaRuta` evita la autocopia. 378/378 pruebas. CI en verde en el run `45424725218`.
 - Se documenta la compilación Android con SDK .NET 10.0.100 local, `maui-android`, APK con ensamblados embebidos y la restricción de instalación de Xiaomi.
 - Se crea `AGENTS.md` y `docs/08-agentes/ONBOARDING.md` con el checklist obligatorio para cualquier agente que continúe desde otro dispositivo.
 - Se añade `scripts/preparar-entorno.ps1` para copiar skills, instalar graphify y verificar .NET, Android SDK, Java y adb.
