@@ -1,7 +1,13 @@
 # Changelog
 
-## 2026-11-24 — P3, ruta de respaldo accionable y datos de prueba
+## 2026-11-24 — Búsqueda dinámica en el POS (P8)
 
+- Se cierra **P8** en `tienda`, rama `feat/pos-busqueda-dinamica` (`c57fef0`): el buscador de **Vender** sugiere productos desde dos caracteres, con espera de 250 ms y hasta ocho coincidencias.
+- `InventoryService.SugerirProductos` ordena por código exacto, prefijo de código, prefijo de nombre, inicio de palabra y coincidencia interna; ignora acentos y mayúsculas.
+- Al agregar desde la lista se limpia el buscador; si el producto no tiene stock, la lista y el texto se conservan. El escaneo por código y Enter siguen igual.
+- Verificado en Windows: sugerencias al escribir, orden por prefijo, escaneo de código, rechazo de stock 0 y lista de Enter. 7 pruebas nuevas; 389 en total. Android compila sin advertencias. CI verde (run `45471273678`) y fusionada a `main` (`c57fef0`).
+
+## 2026-11-24 — P3, ruta de respaldo accionable y datos de prueba
 - Se completa **P3** (prueba con dueño no técnico) en la app de Windows aislada `com.sistematienda.p3`. Resultado positivo: flujo entendido y recomendado; hallazgos en `docs/09-pendientes/p3-resultados-2026-11-24.md`.
 - Se cierra **P6** en `tienda`, rama `fix/p3-respaldo-ruta` (`53a35fe`, fusionada en `main` `290cde6`): copiar ruta de respaldos, abrir la carpeta, lista de respaldos recientes con restauración directa y aviso con **Abrir carpeta** al exportar. Verificado en Windows, incluida la restauración desde la lista con `antes-restaurar`. CI de `main` en verde (run `45463281513`).
 - Se agrega `SistemaTienda.Semilla` en `tienda` (`d0e3c53`, merge `290cde6`): escenarios `limpio`, `configurado` y `demo`, con seguridad para no tocar la app real ni sobrescribir sin `--reset`. 4 pruebas nuevas; 382 en total. CI verde (run `45464387127`).

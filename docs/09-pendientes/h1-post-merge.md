@@ -15,7 +15,7 @@
 | P5 | Iniciar H2 | Media | Siguiente hito del plan, no bloquea H1 | Permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados | H2 cumple sus pruebas y CI; ver plan maestro |
 | P6 | Ruta de respaldo accionable | **Completado** | `fix/p3-respaldo-ruta` (`53a35fe`, fusionada en `290cde6`): copiar ruta, abrir carpeta y respaldos recientes | Verificado en Windows: la ruta se copia, la carpeta se abre y la restauración desde la lista cierra la app y crea `antes-restaurar` | El usuario llega a la carpeta o restaura sin navegar a mano |
 | P7 | QR del ticket no escaneable | Alta | P3: un Android no pudo leer el QR | Reproducir con 2–3 teléfonos; ajustar tamaño, zona de silencio, corrección y contenido | El QR se escanea desde pantalla y desde PNG compartido |
-| P8 | Búsqueda dinámica en POS | Alta | P3: faltó sugerir productos mientras se escribe | `TextChanged` con debounce, resultados con nombre/precio/stock y pruebas con catálogo grande | El cajero encuentra y agrega el producto sin paso extra |
+| P8 | Búsqueda dinámica en POS | **Completado** | `feat/pos-busqueda-dinamica` (`c57fef0`, fusionada en `main` `c57fef0`): `SugerirProductos` con debounce de 250 ms y hasta 8 coincidencias | Verificado en Windows: sugerencias al escribir, orden por prefijo, escaneo intacto, stock 0 conserva lista y 7 pruebas nuevas (389 en total) | El cajero encuentra y agrega el producto sin paso extra |
 
 ## Detalle de P2 — corte de energía
 
