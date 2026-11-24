@@ -1,0 +1,59 @@
+# Instrucciones para agentes
+
+Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El código de producto vive en [`DanielCB096/tienda`](https://github.com/DanielCB096/tienda). No se toca `gym-dotnet` desde aquí.
+
+## Antes de escribir código (obligatorio)
+
+1. Lee [`docs/08-agentes/ONBOARDING.md`](docs/08-agentes/ONBOARDING.md).
+2. Ejecuta:
+
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File scripts\preparar-entorno.ps1
+   ```
+
+   Esto copia las 6 skills P0 a OpenCode y a `~/.agents/skills`, instala `graphify` y verifica .NET, Android SDK y `adb`.
+
+3. Verifica que OpenCode cargó las skills:
+   - `graphify`
+   - `protocolo-de-cambio`
+   - `sqlite-local`
+   - `dinero-y-reglas-caja`
+   - `testing-dotnet`
+   - `seguridad-permisos`
+   - `backup-recovery`
+
+4. Verifica las herramientas:
+   - `dotnet --version`
+   - `dotnet workload list`
+   - `adb devices -l`
+   - `java -version`
+
+5. Lee el estado actual:
+   - [`docs/06-referencias/h1-respaldo-restauracion.md`](docs/06-referencias/h1-respaldo-restauracion.md)
+   - [`docs/06-referencias/h1-android.md`](docs/06-referencias/h1-android.md)
+   - [`docs/08-agentes/catalogo-skills.md`](docs/08-agentes/catalogo-skills.md)
+
+## Reglas de trabajo
+
+- Carga `protocolo-de-cambio` antes de tocar código.
+- Rama dedicada, línea base de pruebas y evidencia al final.
+- No trabajar directamente en `main` de `tienda` sin rama.
+- Una decisión por ADR; documenta antes de implementar.
+- No secretos, credenciales, bases de datos ni respaldos reales en el repositorio.
+
+## Estado actual (2026-11-24)
+
+- **H1 mergeado** en `tienda` `main` (merge `41c5983`, PR #40).
+- **CI de `main` en verde** (Windows y Android compilan).
+- **Verificación manual Windows:** W1–W5 y W8 pasan. Deuda: Android manual, otro equipo físico, corte de energía y prueba con dueño no técnico.
+- **Verificación manual Android:** exportar y restaurar pasan. El paquete de soporte falla porque el ZIP se copia sobre sí mismo en caché.
+- **Rama de corrección:** `fix/android-soporte-cache` en `tienda`, commit `67af2a5`, 378/378 pruebas. Pendiente reconstruir APK y retestar el paquete de soporte con el dispositivo conectado.
+- **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
+- **Graphify:** grafo de código de `tienda` generado localmente; no se versiona `graphify-out/`.
+
+## Siguiente paso
+
+1. Reconstruir el APK de `fix/android-soporte-cache` con ensamblados embebidos.
+2. Retestar el paquete de soporte sin base y con base.
+3. Abrir PR de la rama y mergear cuando el CI esté en verde.
+4. Iniciar **H2**: permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.

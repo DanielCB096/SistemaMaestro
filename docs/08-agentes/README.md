@@ -1,8 +1,9 @@
 # Agentes y skills
 
-**Estado:** catálogo propuesto el 2026-11-23; P0 en proceso de instalación.  
+**Estado:** catálogo propuesto el 2026-11-23; P0 instaladas.  
 **Decisión:** [ADR-002](../07-decisiones/ADR-002-catalogo-skills.md).  
-**Ronda:** [2026-11-23-skills](../05-colaboracion-ia/rondas/2026-11-23-skills.md).
+**Ronda:** [2026-11-23-skills](../05-colaboracion-ia/rondas/2026-11-23-skills.md).  
+**Onboarding obligatorio:** [ONBOARDING.md](ONBOARDING.md) y [`scripts/preparar-entorno.ps1`](../../scripts/preparar-entorno.ps1).
 
 ## Qué es una skill aquí
 
@@ -17,6 +18,7 @@ Una skill es un documento de instrucciones versionado que un agente carga cuando
 ```text
 docs/08-agentes/
 ├─ README.md                 este documento
+├─ ONBOARDING.md             instalación de skills y herramientas
 ├─ catalogo-skills.md        tabla maestra, prioridad, dueño y estado
 ├─ roles.md                  qué skills usa cada rol y cuáles son transversales
 ├─ CHANGELOG.md              historial de versiones del catálogo

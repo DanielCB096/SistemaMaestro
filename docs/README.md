@@ -42,6 +42,7 @@
 - [Tienda](06-referencias/tienda.md)
 - [Gym-dotnet](06-referencias/gym-dotnet.md)
 - [H1 — Respaldo, restauración y WAL](06-referencias/h1-respaldo-restauracion.md)
+- [H1 — Verificación Android](06-referencias/h1-android.md)
 
 ## 07 — Decisiones
 
@@ -53,6 +54,7 @@
 ## 08 — Agentes
 
 - [Agentes y skills](08-agentes/README.md)
+- [Onboarding del agente](08-agentes/ONBOARDING.md)
 - [Catálogo de skills](08-agentes/catalogo-skills.md)
 - [Roles y skills](08-agentes/roles.md)
 - [Changelog de skills](08-agentes/CHANGELOG.md)

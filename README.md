@@ -19,17 +19,22 @@ Repositorio de diseño, decisiones y evolución de la plataforma modular para pe
 | [Protocolo de colaboración con IA](docs/05-colaboracion-ia/protocolo.md) | Roles de ChatGPT, Claude, Gemini y DeepSeek; rondas, reglas y ADRs |
 | [Resumen de la ronda del 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23.md) | Qué aportó cada experto y qué cambió en el plan |
 | [Catálogo de skills](docs/08-agentes/catalogo-skills.md) | Skills P0/P1/P2, dueños, disparadores y criterios de aceptación |
+| [Onboarding del agente](docs/08-agentes/ONBOARDING.md) | Instalación de skills, .NET, Android SDK, adb y graphify |
 | [Ronda de skills 2026-11-23](docs/05-colaboracion-ia/rondas/2026-11-23-skills.md) | Propuestas de ChatGPT, Claude y Gemini y catálogo consolidado |
 | [Verificación manual de H1](docs/05-colaboracion-ia/rondas/2026-11-23-verificacion-h1.md) | Criterios de las IA y resultados reales en Windows |
 | [H1 implementado](docs/06-referencias/h1-respaldo-restauracion.md) | Respaldo, restauración, WAL e instancia única; rama y commit |
+| [H1 en Android](docs/06-referencias/h1-android.md) | Resultados de exportar, restaurar y paquete de soporte en el POCO X6 Pro |
 | [Plantilla de ADR](docs/07-decisiones/ADR-000-plantilla.md) | Formato para registrar decisiones arquitectónicas |
 
 ## Estructura
 
 ```text
 SistemaMaestro/
+├─ AGENTS.md                   instrucciones obligatorias para agentes
 ├─ README.md
 ├─ CHANGELOG.md
+├─ scripts/
+│  └─ preparar-entorno.ps1     skills + verificación de herramientas
 ├─ docs/
 │  ├─ 00-auditoria/            análisis de los sistemas existentes
 │  ├─ 01-plan/                 plan maestro, roadmap y decision briefs
@@ -37,9 +42,9 @@ SistemaMaestro/
 │  ├─ 03-producto/             definición de producto, precios y piloto
 │  ├─ 04-operacion/            hardware, actualizaciones, CFDI y soporte
 │  ├─ 05-colaboracion-ia/      protocolo y resúmenes de rondas
-│  ├─ 06-referencias/          perfiles de tienda y gym-dotnet
+│  ├─ 06-referencias/          perfiles de tienda, gym-dotnet y H1
 │  ├─ 07-decisiones/           ADRs
-│  └─ 08-agentes/              skills, roles y catálogo de agentes
+│  └─ 08-agentes/              skills, roles, catálogo y onboarding
 └─ (código futuro)
 ```
 

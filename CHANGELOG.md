@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-11-24 — Verificación Android y onboarding
+
+- Se verifica H1 en un POCO X6 Pro 5G (Android 16 / HyperOS 3.0):
+  - Exportar respaldo: **pasa** (share sheet + archivo en caché).
+  - Restaurar respaldo: **pasa** (respaldo previo y datos conservados).
+  - Paquete de soporte: **falla** porque el ZIP se copia sobre sí mismo en caché.
+- Corrección en `tienda`, rama `fix/android-soporte-cache` (`67af2a5`): `CarpetaExportacion.EsMismaRuta` evita la autocopia. 378/378 pruebas.
+- Se documenta la compilación Android con SDK .NET 10.0.100 local, `maui-android`, APK con ensamblados embebidos y la restricción de instalación de Xiaomi.
+- Se crea `AGENTS.md` y `docs/08-agentes/ONBOARDING.md` con el checklist obligatorio para cualquier agente que continúe desde otro dispositivo.
+- Se añade `scripts/preparar-entorno.ps1` para copiar skills, instalar graphify y verificar .NET, Android SDK, Java y adb.
+- Se añade `docs/06-referencias/h1-android.md` con resultados y pasos de retest.
+
 ## 2026-11-23 — Verificación manual de H1
 
 - Se consulta a ChatGPT, Claude y Gemini el criterio de aceptación manual de H1; respuestas en `docs/05-colaboracion-ia/rondas/2026-11-23-verificacion-h1/`.
