@@ -10,7 +10,7 @@
 |---|---|---|---|---|
 | 0 | ChatGPT + Claude + Gemini | Criterio de aceptación manual de H1 | Qué evidencia exige el merge | respondida |
 | 0 | ChatGPT + Claude + Gemini | Catálogo de skills para los agentes que trabajan el código | Qué skills crear, priorizar y documentar | respondida |
-| 0 | ChatGPT + Claude + Gemini | Matriz rol × acción, sesión y respaldos cifrados de H2 | Qué permisos y bloqueos implementa H2 | enviada |
+| 0 | ChatGPT + Claude + Gemini | Matriz rol × acción, sesión y respaldos cifrados de H2 | Qué permisos y bloqueos implementa H2 | respondida (2 decisiones al dueño) |
 | 1 | ChatGPT | Guion de venta, objeciones y contrato de piloto | Cómo vender V2 antes y durante el piloto | pendiente |
 | 1 | Claude | Especificación de H1–H4 con pruebas y criterios de aceptación | Qué se implementa primero | pendiente |
 | 2 | Gemini | Flujos de onboarding, venta rápida, corte ciego y soporte | UX mínima vendible | pendiente |
