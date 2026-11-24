@@ -51,7 +51,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
-- **Pendientes post-H1:** otro equipo/tablet, corte de energía real, dueño no técnico y acceso de colaborador en GitHub. Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
+- **Pendientes post-H1:** otro equipo/tablet, corte de energía real y acceso de colaborador en GitHub. P3 (dueño no técnico) **completado** el 2026-11-24; hallazgos P6–P8 (ruta de respaldo, QR y búsqueda dinámica). Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
 
 ## Siguiente paso
 

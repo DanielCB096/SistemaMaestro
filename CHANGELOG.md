@@ -51,3 +51,4 @@
 - **Limpieza Android:** `chore/instancia-unica-warnings` (`82aa23e`) deja la compilación Android en 0 advertencias; 378/378 pruebas y CI verde (run `45442442966`). Fusionada a `main`.
 - **Pendientes post-H1 anotados:** otro equipo/tablet, corte de energía real, dueño no técnico y acceso de colaborador en GitHub. Ver `docs/09-pendientes/h1-post-merge.md`.
 - **P3 preparado:** app Windows aislada `com.sistematienda.p3`, acceso directo de prueba, guion del participante, hoja de observación y scripts de preparación/limpieza en `scripts/`.
+- **P3 completado (2026-11-24):** el participante completó el flujo y recomendaría el sistema. Hallazgos: ruta de respaldo poco accionable (P6), QR del ticket no escaneable (P7) y falta de búsqueda dinámica en POS (P8). Ver `docs/09-pendientes/p3-resultados-2026-11-24.md`.
