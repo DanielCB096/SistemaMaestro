@@ -50,3 +50,4 @@
 - **Entorno de agentes:** 6 skills P0 + graphify instaladas en OpenCode y `~/.agents/skills`; SDK .NET 10.0.100 local con `maui-android`, Android SDK 36, platform-tools y JDK 17.
 - **Limpieza Android:** `chore/instancia-unica-warnings` (`82aa23e`) deja la compilación Android en 0 advertencias; 378/378 pruebas y CI verde (run `45442442966`). Fusionada a `main`.
 - **Pendientes post-H1 anotados:** otro equipo/tablet, corte de energía real, dueño no técnico y acceso de colaborador en GitHub. Ver `docs/09-pendientes/h1-post-merge.md`.
+- **P3 preparado:** app Windows aislada `com.sistematienda.p3`, acceso directo de prueba, guion del participante, hoja de observación y scripts de preparación/limpieza en `scripts/`.

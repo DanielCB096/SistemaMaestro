@@ -10,7 +10,7 @@
 |---|---|---|---|---|---|
 | P1 | Probar en otro equipo físico/tablet | Alta | Solo se probó en POCO X6 Pro 5G / Android 16 y en el equipo Windows de desarrollo | Instalar el APK firmado en un segundo dispositivo Android 10+ arm64 y repetir el checklist de `h1-android.md` | Exportar, restaurar, paquete sin base y con base pasan; sin crashes ni descuadres |
 | P2 | Corte de energía real | Alta | El cierre forzado no equivale a un corte eléctrico; hay que validar WAL y recuperación | Usar un dispositivo de prueba con datos ficticios y un corte controlado (regleta o apagado) durante venta, respaldo, migración y restauración | Venta completa o inexistente; respaldo anterior intacto; base abre sin corrupción; restauración conserva datos o revierte al respaldo previo |
-| P3 | Prueba con dueño no técnico | Media | La verificación actual es técnica y automatizada; falta usabilidad real | Sesión de 30–45 min con una persona del perfil objetivo, sin ayuda verbal, siguiendo el manual del dueño | Completa alta de tienda, venta, corte, respaldo y restauración sin asistencia; se registran fricciones |
+| P3 | Prueba con dueño no técnico | Media | La verificación actual es técnica y automatizada; falta usabilidad real | Sesión de 30–45 min con una persona del perfil objetivo, sin ayuda verbal, siguiendo el manual del dueño. **Materiales listos:** [`p3-guion-participante.md`](p3-guion-participante.md) y [`p3-observacion.md`](p3-observacion.md); app Windows aislada y acceso directo en el Escritorio | Completa alta de tienda, venta, corte, respaldo y restauración sin asistencia; se registran fricciones |
 | P4 | Acceso de colaborador en GitHub | Media | La cuenta de Edge no puede abrir PR (`must be a collaborator`); se usó fast-forward | Agregar la cuenta a `DanielCB096/tienda` como colaboradora o usar una cuenta con permiso | Se puede abrir y mergear una PR de prueba sin fast-forward |
 | P5 | Iniciar H2 | Media | Siguiente hito del plan, no bloquea H1 | Permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados | H2 cumple sus pruebas y CI; ver plan maestro |
 
@@ -33,6 +33,14 @@ Registrar en `docs/06-referencias/h1-android.md` o en una nueva ronda de verific
 - Captura o log si falla.
 
 ## Detalle de P3 — dueño no técnico
+
+**Materiales preparados:**
+
+- Guion del participante: [`p3-guion-participante.md`](p3-guion-participante.md).
+- Hoja de observación: [`p3-observacion.md`](p3-observacion.md).
+- Preparar/limpiar la app: `scripts\p3-preparar.ps1 -Reset` y `scripts\p3-reset.ps1`.
+- App aislada: `com.sistematienda.p3`, acceso directo **“Prueba P3 - SistemaTienda”** en el Escritorio.
+- Datos de prueba: tienda Abarrotes La Esquina, PIN 2468, producto P3-001, venta de 2 refrescos, fondo $200.
 
 Guion sugerido:
 
