@@ -13,7 +13,7 @@
 | P3 | Prueba con dueño no técnico | **Completado** | Sesión realizada el 2026-11-24 | Participante completó el flujo y recomendaría el sistema; hallazgos en [`p3-resultados-2026-11-24.md`](p3-resultados-2026-11-24.md) | Flujo entendible; fricciones en respaldo, QR y búsqueda |
 | P4 | Acceso de colaborador en GitHub | Media | La cuenta de Edge no puede abrir PR (`must be a collaborator`); se usó fast-forward | Agregar la cuenta a `DanielCB096/tienda` como colaboradora o usar una cuenta con permiso | Se puede abrir y mergear una PR de prueba sin fast-forward |
 | P5 | Iniciar H2 | Media | Siguiente hito del plan, no bloquea H1 | Permisos por acción, bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados | H2 cumple sus pruebas y CI; ver plan maestro |
-| P6 | Ruta de respaldo accionable | Alta | P3: no se podía copiar ni abrir la ruta desde el diálogo | Copiar ruta, abrir carpeta, selector inicial en respaldos y lista de recientes | El usuario llega a la carpeta o restaura sin navegar a mano |
+| P6 | Ruta de respaldo accionable | **Completado** | `fix/p3-respaldo-ruta` (`53a35fe`, fusionada en `290cde6`): copiar ruta, abrir carpeta y respaldos recientes | Verificado en Windows: la ruta se copia, la carpeta se abre y la restauración desde la lista cierra la app y crea `antes-restaurar` | El usuario llega a la carpeta o restaura sin navegar a mano |
 | P7 | QR del ticket no escaneable | Alta | P3: un Android no pudo leer el QR | Reproducir con 2–3 teléfonos; ajustar tamaño, zona de silencio, corrección y contenido | El QR se escanea desde pantalla y desde PNG compartido |
 | P8 | Búsqueda dinámica en POS | Alta | P3: faltó sugerir productos mientras se escribe | `TextChanged` con debounce, resultados con nombre/precio/stock y pruebas con catálogo grande | El cajero encuentra y agrega el producto sin paso extra |
 
@@ -45,6 +45,9 @@ Registrar en `docs/06-referencias/h1-android.md` o en una nueva ronda de verific
 - Preparar/limpiar la app: `scripts\p3-preparar.ps1 -Reset` y `scripts\p3-reset.ps1`.
 - App aislada: `com.sistematienda.p3`, acceso directo **“Prueba P3 - SistemaTienda”** en el Escritorio.
 - Datos de prueba: tienda Abarrotes La Esquina, PIN 2468, producto P3-001, venta de 2 refrescos, fondo $200.
+- Datos precargados opcionales: `scripts\p3-preparar.ps1 -Semilla demo` deja ventas, clientes, proveedores, compras, gastos, caja y un corte; PIN 1234. No se usa para la prueba de primera vez.
+
+**Datos de prueba automatizados:** `tienda` incorpora `SistemaTienda.Semilla` con escenarios `limpio`, `configurado` y `demo`. Detalle en [`tienda/SistemaTienda/docs/07-pruebas/datos-de-prueba.md`](../../tienda/SistemaTienda/docs/07-pruebas/datos-de-prueba.md). Para P3 se usa `limpio` porque el asistente de primera vez solo se valida con la base vacía.
 
 Guion sugerido:
 

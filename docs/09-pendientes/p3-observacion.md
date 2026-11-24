@@ -6,11 +6,13 @@
 
 ## Preparación
 
-1. Cierra la app de prueba y limpia datos:
+1. Cierra la app de prueba y deja la base vacía (escenario `limpio`):
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File C:\opentelemety\SistemaMaestro\scripts\p3-reset.ps1
+powershell -ExecutionPolicy Bypass -File C:\opentelemety\SistemaMaestro\scripts\p3-preparar.ps1 -Reset
 ```
+
+La prueba de primera vez exige base vacía: el participante debe pasar por el asistente y elegir su PIN. Si quieres una demo con datos, usa `-Semilla demo` (PIN 1234), pero no es la prueba P3.
 
 2. Verifica el acceso directo `Prueba P3 - SistemaTienda` en el Escritorio.
 3. Imprime o muestra [`p3-guion-participante.md`](p3-guion-participante.md).

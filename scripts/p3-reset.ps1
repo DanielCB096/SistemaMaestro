@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 
 $data = Join-Path $env:LOCALAPPDATA "SistemaTienda\com.sistematienda.p3"
 
@@ -12,3 +12,5 @@ if (Test-Path $data) {
 }
 
 Write-Host "La app real no se toca; solo se borra la carpeta com.sistematienda.p3."
+Write-Host "Para dejarla lista con datos de demo:"
+Write-Host "  powershell -ExecutionPolicy Bypass -File scripts\p3-preparar.ps1 -Semilla demo"

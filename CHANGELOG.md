@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-24 — P3, ruta de respaldo accionable y datos de prueba
+
+- Se completa **P3** (prueba con dueño no técnico) en la app de Windows aislada `com.sistematienda.p3`. Resultado positivo: flujo entendido y recomendado; hallazgos en `docs/09-pendientes/p3-resultados-2026-11-24.md`.
+- Se cierra **P6** en `tienda`, rama `fix/p3-respaldo-ruta` (`53a35fe`, fusionada en `main` `290cde6`): copiar ruta de respaldos, abrir la carpeta, lista de respaldos recientes con restauración directa y aviso con **Abrir carpeta** al exportar. Verificado en Windows, incluida la restauración desde la lista con `antes-restaurar`. CI de `main` en verde (run `45463281513`).
+- Se agrega `SistemaTienda.Semilla` en `tienda` (`d0e3c53`, merge `290cde6`): escenarios `limpio`, `configurado` y `demo`, con seguridad para no tocar la app real ni sobrescribir sin `--reset`. 4 pruebas nuevas; 382 en total. CI verde (run `45464387127`).
+- `scripts/p3-preparar.ps1` acepta `-Semilla` y usa la base limpia por defecto, porque el asistente de primera vez solo se valida desde cero.
+- Android local: el JDK 17 vigente está en `%LOCALAPPDATA%\jdk17`; `JAVA_HOME` y `ANDROID_HOME` deben exportarse en cada sesión.
+
 ## 2026-11-24 — Verificación Android y onboarding
 
 - Se verifica H1 en un POCO X6 Pro 5G (Android 16 / HyperOS 3.0):
