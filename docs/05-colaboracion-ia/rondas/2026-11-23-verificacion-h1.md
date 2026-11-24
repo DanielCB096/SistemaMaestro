@@ -57,6 +57,16 @@
 | A1–A3 Android | **PENDIENTE** | Sin `adb` ni dispositivo/emulador |
 | Otro equipo físico | **PENDIENTE** | Restauración probada en base aislada, no en hardware distinto |
 
+### Evidencia de archivos
+
+| Archivo | Tamaño | SHA-256 |
+|---|---:|---|
+| `tienda-20261123-212648-exportacion.db` | 221,184 B | `86097F1F09E925AFCC397C85987A5F6976DE14E8602EC9C8AA9DB8921610CE4F` |
+| `soporte-20261123-212921.zip` (sin base) | 701 B | `E89C4BC8BCC5795C2E22E728C182F946F0864FE3E3D6F767B30B2A801EE3B33D` |
+| `soporte-20261123-213009.zip` (con base) | 6,937 B | `6F6861DFE1C2836EF0EB8F1DFC9267EF5BDC079F6EC28325DEB17E32DD97F2CE` |
+
+Los archivos de prueba se eliminaron después de registrar la evidencia; los hashes quedan en este documento.
+
 ## Hallazgo real
 
 En este equipo, `C:\Users\PC\Documents` **no permite crear archivos** aunque el ACL muestre control total. `Directory.CreateDirectory` y `File.Copy` fallan con `FileNotFoundException`. Es un problema de la carpeta conocida (posible redirección/OneDrive), no de SQLite ni del respaldo.
