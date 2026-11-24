@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-24 — H2.3: respaldos cifrados
+
+- Clave de respaldo de 120 bits en DPAPI/SecureStorage y tarjeta de recuperación; AES-256-GCM + PBKDF2-SHA256 (600k).
+- Los respaldos nuevos (manuales y automáticos) se cifran como `.db.stb`; restaurar pide la clave y no toca la base si falla.
+- Los respaldos viejos sin cifrar se pueden restaurar con aviso.
+- Esquema v16 (`RespaldoCifradoActivado`); 14 pruebas nuevas (422 en total). CI en verde (run `45512214039`) y fusionada a `main` (`dc7b80c`).
+- Pendiente H2.3b: activación guiada en el asistente, cifrar el paquete de soporte y verificar en Android.
+
 ## 2026-11-24 — H2.2: bloqueo de sesión y errores
 
 - Esquema v15 en `tienda`: `ConfiguracionTienda.MinutosInactividad` (2–15, por defecto 5) y `EstadoAcceso` para el bloqueo del login.

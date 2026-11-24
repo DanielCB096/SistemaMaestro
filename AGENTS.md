@@ -49,6 +49,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Verificación manual Android:** **PASA**. Exportar, restaurar, paquete sin base y paquete con base verificados en POCO X6 Pro 5G / Android 16. Evidencia en [`docs/06-referencias/h1-android.md`](docs/06-referencias/h1-android.md).
 - **Corrección Android:** `fix/android-soporte-cache`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Fusionada a `main` por fast-forward (`84dc8e1..67af2a5`) porque la cuenta de Edge no puede abrir PR (`must be a collaborator`).
 - **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
+- **H2.3 hecho y fusionado** (`dc7b80c`, CI `45512214039`): respaldos cifrados con AES-256-GCM + PBKDF2 (600k), clave en DPAPI/SecureStorage, tarjeta de recuperación y restauración con clave; ver [ADR-004](docs/07-decisiones/ADR-004-respaldos-cifrados.md). Pendiente H2.3b: activación guiada en el asistente, paquete de soporte cifrado y verificación en Android.
 - **H2.2 hecho y fusionado** (`06a7c11`, CI `45501565476`): bloqueo persistente (5 intentos, 3 minutos, estado en `EstadoAcceso`), timeout de inactividad configurable (2–15 min) y manejador global de errores en `logs/errores.log`; 408 pruebas.
 - **H2.1 hecho y fusionado** (`881bfc8`, CI `45496679264`): permisos por acción según [ADR-003](docs/07-decisiones/ADR-003-permisos-accion.md). `VerCostos` por usuario; el encargado no ve costos salvo concesión; 403 pruebas.
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
@@ -58,6 +59,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 
 ## Siguiente paso
 
-1. Seguir con H2.3 (respaldos cifrados).
+1. Cerrar H2.3b (activación guiada en el asistente, paquete de soporte cifrado y verificación en Android).
+2. Pasar a H3: pruebas de caracterización y una sola fuente de stock.
 2. Cerrar los pendientes de campo de [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía y acceso de colaborador.
 3. Bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
