@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-24 — QR del ticket legible (P7)
+
+- Se corrige el QR en `tienda`, rama `fix/ticket-qr-escaneo` (`28f66e4`): ya no incluye productos, baja de 89×89 a 49×49 módulos y se muestra como imagen de 240 dp.
+- Evidencia: el PNG y una captura de pantalla (258×258 px) se decodificaron con `pyzbar` y devolvieron tienda, folio, fecha, total y método.
+- Pruebas: 390 en verde; dos pruebas nuevas impiden que el QR vuelva a crecer. CI en verde (run `45479446077`) y fusionada a `main` (`28f66e4`).
+- Pendiente: escaneo con la cámara de un teléfono físico.
+
 ## 2026-11-24 — Búsqueda dinámica en el POS (P8)
 
 - Se cierra **P8** en `tienda`, rama `feat/pos-busqueda-dinamica` (`c57fef0`): el buscador de **Vender** sugiere productos desde dos caracteres, con espera de 250 ms y hasta ocho coincidencias.
