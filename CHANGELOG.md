@@ -9,7 +9,7 @@
 - Se instala `graphify` en OpenCode y se genera el grafo AST de `tienda` (2,531 nodos, 8,160 aristas, 124 comunidades).
 - Se documenta que las sesiones web de ChatGPT, Claude y Gemini no cargan skills locales; usan el catálogo como contexto.
 - Se corrige el estado de H1: el job de pruebas pasó, pero el job MAUI falló en “Compilar para Windows” (run `45293159856`); la rama sigue sin fusionar y sin PR.
-- Se corrige el fallo de compilación MAUI de H1 en `10fb923`: `Application.Current` ambiguo con `SistemaTienda.Application`; verificado en local con Windows y 373/373 pruebas. CI pendiente de confirmar.
+- Se corrige el fallo de compilación MAUI de H1 en `10fb923`: `Application.Current` ambiguo con `SistemaTienda.Application`; verificado en local con Windows y 373/373 pruebas. CI confirmado en verde en el run `45301168757` (Windows y Android).
 
 ## 2026-11-23 — Documentación inicial
 

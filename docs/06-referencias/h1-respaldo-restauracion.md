@@ -1,13 +1,14 @@
 # H1 — Respaldo, restauración y confiabilidad local
 
-**Estado:** implementado en rama; corrección de CI MAUI subida y pendiente de confirmar el nuevo run.  
+**Estado:** implementado en rama; **CI en verde**; pendiente verificación manual y PR.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `feat/h1-respaldo-restauracion`  
 **Commit:** `7e09cb7` (estado); corrección de CI en `10fb923`; implementación en `4e89fe0`  
 **Fecha:** 2026-11-23  
 **Estado detallado:** `SistemaTienda/docs/estado-h1.md` en la rama  
-**CI:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>  
-**CI observado el 2026-11-23:** el job “Compilar y probar” pasó; el job “Compilar app MAUI (Windows y Android)” **falló** en “Compilar para Windows” (run `45293159856`, commit `8a4fe0c`) por `CS0234`: `Application.Current` se resolvía contra el espacio de nombres `SistemaTienda.Application`.
+**CI original:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>  
+**CI fallido:** run `45293159856` (commit `8a4fe0c`), `CS0234` en `AjustesPage.xaml.cs`.  
+**CI corregido:** <https://github.com/DanielCB096/tienda/actions/runs/45301168757> (commit `7e09cb7`), ambos jobs en verde.
 
 ## Corrección de CI MAUI (`10fb923`)
 
@@ -16,7 +17,7 @@
 - Verificación local:
   - `dotnet build SistemaTienda/SistemaTienda.Maui/SistemaTienda.Maui.csproj -f net10.0-windows10.0.19041.0 -c Release`: **0 errores**, 2 advertencias XAML preexistentes.
   - `dotnet test SistemaTienda/SistemaTienda.sln -c Release`: **373/373** en verde.
-- El nuevo run de CI queda pendiente de confirmación.
+- El nuevo run de CI quedó **en verde**: “Compilar y probar” y “Compilar app MAUI (Windows y Android)” pasaron.
 
 ## Alcance implementado
 
@@ -58,7 +59,6 @@
 
 ## Pendiente
 
-- Confirmar el nuevo run de CI (Windows y Android) después de `10fb923`.
 - Verificación manual en Windows y Android de los botones de Ajustes.
 - Restaurar en otro dispositivo.
 - Probar dos instancias en Windows.

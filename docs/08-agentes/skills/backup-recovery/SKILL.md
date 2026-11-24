@@ -24,7 +24,7 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
   - WAL, `busy_timeout=30000`, `synchronous=NORMAL` e instancia única en Windows.
   - Conexiones de respaldo sin pooling.
   - Exportar, restaurar y paquete de soporte visibles solo para el dueño; restauración valida `Configurar` en el servicio.
-- La suite de H1 quedó en 373 pruebas; el job MAUI de CI **falló** en la compilación Windows y sigue pendiente.
+- La suite de H1 quedó en 373 pruebas; CI en verde en el run `45301168757`, con Windows y Android compilando.
 - La verificación manual en Windows y Android, la restauración en otro dispositivo y las dos instancias siguen pendientes.
 - El cifrado de respaldos es parte de H2, no de H1.
 
@@ -90,7 +90,7 @@ Garantizar que el negocio pueda recuperar sus datos después de un error, un rob
 
 ## Pendientes de H1 que afectan esta skill
 
-- Corregir el job MAUI de CI (falla en “Compilar para Windows”).
+- CI en verde (run `45301168757`); Windows y Android compilan.
 - Verificación manual en Windows y Android.
 - Restauración en otro dispositivo.
 - Prueba de dos instancias.
