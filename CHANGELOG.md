@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-24 — H2.2: bloqueo de sesión y errores
+
+- Esquema v15 en `tienda`: `ConfiguracionTienda.MinutosInactividad` (2–15, por defecto 5) y `EstadoAcceso` para el bloqueo del login.
+- **5 intentos fallidos bloquean el acceso 3 minutos**, con estado persistido en SQLite y bitácora de cada fallo.
+- **Bloqueo por inactividad:** modal que conserva el carrito, se desbloquea con PIN y permite cambiar de usuario.
+- **Manejador global de errores** con registro en `logs/errores.log`.
+- 5 pruebas nuevas (408 en total). CI en verde (run `45501565476`) y fusionada a `main` (`06a7c11`).
+
 ## 2026-11-24 — H2.1: permisos por acción
 
 - Se implementa la matriz del [ADR-003](docs/07-decisiones/ADR-003-permisos-accion.md) en `tienda`, rama `feat/h2-permisos-accion`.
