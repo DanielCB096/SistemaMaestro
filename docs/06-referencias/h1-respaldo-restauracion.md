@@ -3,12 +3,13 @@
 **Estado:** implementado en rama; **CI en verde**; pendiente verificación manual y PR.  
 **Repositorio:** `DanielCB096/tienda`  
 **Rama:** `feat/h1-respaldo-restauracion`  
-**Commit:** `7e09cb7` (estado); corrección de CI en `10fb923`; implementación en `4e89fe0`  
+**Commit:** `0ca16ef` (estado final); corrección de CI en `10fb923`; implementación en `4e89fe0`  
 **Fecha:** 2026-11-23  
 **Estado detallado:** `SistemaTienda/docs/estado-h1.md` en la rama  
 **CI original:** <https://github.com/DanielCB096/tienda/actions/runs/45292691228>  
 **CI fallido:** run `45293159856` (commit `8a4fe0c`), `CS0234` en `AjustesPage.xaml.cs`.  
-**CI corregido:** <https://github.com/DanielCB096/tienda/actions/runs/45301168757> (commit `7e09cb7`), ambos jobs en verde.
+**CI corregido:** <https://github.com/DanielCB096/tienda/actions/runs/45301168757> (commit `7e09cb7`), ambos jobs en verde.  
+**CI final de la rama:** <https://github.com/DanielCB096/tienda/actions/runs/45302432719> (commit `0ca16ef`), ambos jobs en verde.
 
 ## Corrección de CI MAUI (`10fb923`)
 
