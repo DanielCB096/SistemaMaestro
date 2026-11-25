@@ -56,6 +56,7 @@
 - [ADR-007 — Bitácora dentro de la transacción](07-decisiones/ADR-007-bitacora-transaccion.md)
 - [ADR-008 — Instalación, actualización y reversión](07-decisiones/ADR-008-instalacion-actualizacion.md)
 - [ADR-009 — Onboarding, tickets en espera y búsqueda](07-decisiones/ADR-009-onboarding-tickets-busqueda.md)
+- [ADR-010 — Marca POSale e icono](07-decisiones/ADR-010-marca-posale.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

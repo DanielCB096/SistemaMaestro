@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-25 — Marca POSale e icono
+
+- Nombre visible de la app: **POSale**; el repositorio, ApplicationId, carpeta de datos y manifiesto conservan `SistemaTienda` para no romper respaldos ni actualizaciones ([ADR-010](docs/07-decisiones/ADR-010-marca-posale.md)).
+- Icono SVG nuevo: canasta, etiqueta de precio y signo de peso en verde, crema y contorno casi negro; incluye foreground adaptativo y splash.
+- Paquete de Windows renombrado a `POSale-<versión>-win-x64.zip`.
+- Verificado el icono a 24–256 px en Windows; pendiente Android.
+
 ## 2026-11-25 — Piloto preparado
 
 - Plan de 30 días, instalación/día 0, checklist imprimible, capacitación, tarjeta del cajero, guion semanal, registro de incidencias, privacidad y criterios de éxito en `tienda/SistemaTienda/docs/08-piloto`.

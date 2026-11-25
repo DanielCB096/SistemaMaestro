@@ -69,7 +69,7 @@ $rutaManifiesto = Join-Path $app "manifiesto.json"
 $manifiesto | ConvertTo-Json | Set-Content -LiteralPath $rutaManifiesto -Encoding UTF8
 
 $leeme = @"
-SistemaTienda $Version
+POSale $Version
 Esquema de base de datos: $($base.versionEsquema)
 
 Instalacion:
@@ -83,7 +83,7 @@ Los datos viven aparte y no se tocan:
 "@
 Set-Content -LiteralPath (Join-Path $app "LEEME.txt") -Value $leeme -Encoding UTF8
 
-$zip = Join-Path $salidaAbs "SistemaTienda-$Version-$Runtime.zip"
+$zip = Join-Path $salidaAbs "POSale-$Version-$Runtime.zip"
 if (Test-Path $zip) {
     Remove-Item $zip -Force
 }

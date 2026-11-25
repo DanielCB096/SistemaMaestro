@@ -42,7 +42,8 @@ if ($Empaquetar) {
             throw "El empaquetado fallo con codigo $LASTEXITCODE"
         }
 
-        $Paquete = Get-ChildItem $temp -Filter "SistemaTienda-*-win-x64.zip" |
+        $Paquete = Get-ChildItem $temp -File |
+            Where-Object { $_.Name -like "POSale-*-win-x64.zip" -or $_.Name -like "SistemaTienda-*-win-x64.zip" } |
             Select-Object -First 1 -ExpandProperty FullName
         if ([string]::IsNullOrWhiteSpace($Paquete)) {
             throw "No se genero el ZIP de la app en $temp"
@@ -99,7 +100,7 @@ Get-ChildItem -LiteralPath $docsOrigen -Filter "*.md" |
 
 $hash = (Get-FileHash -LiteralPath $Paquete -Algorithm SHA256).Hash
 $leeme = @"
-SistemaTienda - Kit de piloto
+POSale - Kit de piloto
 =============================
 
 Version de la app: $($manifiesto.versionApp)
