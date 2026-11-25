@@ -51,6 +51,7 @@
 - [ADR-002 — Catálogo de skills](07-decisiones/ADR-002-catalogo-skills.md)
 - [ADR-003 — Matriz de permisos por acción](07-decisiones/ADR-003-permisos-accion.md)
 - [ADR-004 — Respaldos cifrados](07-decisiones/ADR-004-respaldos-cifrados.md)
+- [ADR-005 — El stock se deriva de los movimientos](07-decisiones/ADR-005-stock-movimientos.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

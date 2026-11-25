@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — H3: caracterización del inventario
+
+- 6 pruebas de caracterización: tras alta, entrada, merma, ajuste, venta, anulación y compra, el stock coincide con el log de movimientos.
+- `ProductosDescuadrados()` para diagnóstico y línea en el paquete de soporte.
+- Esquema v17: reconciliación de `Productos.Stock` con los movimientos.
+- Decisión en [ADR-005](docs/07-decisiones/ADR-005-stock-movimientos.md): el log es la verdad; la caché se actualiza en la misma transacción.
+- 430 pruebas en total. CI en verde (run `45660429181`) y fusionada a `main` (`2d58b70`).
+
 ## 2026-11-25 — Cierre H2.3b y verificación Android
 
 - El asistente inicial ofrece activar el cifrado con tarjeta de recuperación; el paquete de soporte se cifra con la misma clave.
