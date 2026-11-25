@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-25 — Piloto preparado
+
+- Plan de 30 días, instalación/día 0, checklist imprimible, capacitación, tarjeta del cajero, guion semanal, registro de incidencias, privacidad y criterios de éxito en `tienda/SistemaTienda/docs/08-piloto`.
+- `scripts/piloto-preparar.ps1` arma el kit con la app, el instalador y la documentación; valida el manifiesto y calcula SHA-256.
+- El piloto queda listo para ejecutarse con una tienda real; no se inició ninguna instalación real.
+
 ## 2026-11-25 — H6.3: búsqueda medida y escaneo sin pérdida
 
 - 3000 productos medidos en Windows Release: 33.52 ms para sugerencias, 28.08 ms para nombre y 0.07 ms para código exacto.
