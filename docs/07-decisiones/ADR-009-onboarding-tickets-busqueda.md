@@ -66,5 +66,7 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
   Lotes, búsqueda `cafe`, código completo, guardar/retomar/cobrar ticket, persistencia
   tras reinicio y descarte auditado. Se corrigió el formato de moneda en **En espera**.
   Detalle en `verificacion-h6-android.md`.
-- Pendiente: vista previa de importación y reversión de lote desde la interfaz en
-  Android, escáner físico de 13 dígitos y medición instrumentada de milisegundos.
+- En la misma sesión se verificaron la vista previa (3 leídas, 2 válidas, 1 omitida),
+  la importación del lote #2 y su reversión desde la interfaz: productos inactivos,
+  stock 0, ajustes compensatorios y bitácora.
+- Pendiente: escáner físico de 13 dígitos y medición instrumentada de milisegundos.
