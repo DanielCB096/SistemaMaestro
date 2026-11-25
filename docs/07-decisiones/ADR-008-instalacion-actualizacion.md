@@ -13,6 +13,7 @@ La app se distribuía compilando desde el repositorio. No había manifiesto de v
 ### Paquete y manifiesto
 
 - Cada versión se publica como un ZIP con la app de Windows y `manifiesto.json`.
+- El paquete es **autocontenido**: incluye el runtime de .NET (`coreclr.dll`), así que la tienda no necesita instalar nada más. Se activa con `-p:H5Empaquetar=true`, que solo aplica al objetivo de Windows y no afecta al build diario ni a Android.
 - El manifiesto declara `producto`, `versionApp`, `versionEsquema` y la fecha de generación.
 - `versionEsquema` sale de `Migraciones.VersionActual`; el empaquetador lo pide con `SistemaTienda.Semilla --manifiesto` para no duplicar el número a mano.
 - La app compara la versión de la base con la que conoce. Si la base es más nueva, se niega a abrirla en vez de degradarla.
@@ -56,3 +57,4 @@ La app se distribuía compilando desde el repositorio. No había manifiesto de v
 - `FechasLocalesTests` fija el filtro por día local en los bordes.
 - Suite completa: 459 pruebas.
 - `h5-instalar.ps1` se probó con paquetes simulados: instalar 1.0.0, actualizar a 1.1.0, revertir a 1.0.0 y rechazar un manifiesto inválido sin mover el puntero.
+- El paquete real 1.1.0 se generó, se instaló en una carpeta temporal, la app autocontenida arrancó y creó su base, se actualizó a un 1.1.1 y se revirtió a 1.1.0 conservando ambas carpetas.

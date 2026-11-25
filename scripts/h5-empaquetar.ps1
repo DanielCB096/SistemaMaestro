@@ -38,14 +38,17 @@ Write-Host "Publicando $Version ($Runtime)..."
 & $dotnet publish $proyecto `
     -f net10.0-windows10.0.19041.0 `
     -c Release `
-    -p:WindowsPackageType=None `
-    -p:RuntimeIdentifier=$Runtime `
+    -p:H5Empaquetar=true `
     -p:Version=$Version `
     -p:ApplicationDisplayVersion=$Version `
     -o $app
 
 if ($LASTEXITCODE -ne 0) {
     throw "La publicacion fallo con codigo $LASTEXITCODE"
+}
+
+if (!(Test-Path (Join-Path $app "coreclr.dll"))) {
+    throw "El paquete no es autocontenido: falta coreclr.dll en $app"
 }
 
 # El manifiesto toma la version de esquema de la propia app para no duplicarla.

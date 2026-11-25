@@ -110,7 +110,7 @@ try {
     }
 
     Write-Host "Copiando $version..."
-    Copy-Item -Path (Join-Path $origen "*") -Destination $trabajo -Recurse -Force
+    Copy-Item -LiteralPath $origen -Destination $trabajo -Recurse -Force
 
     if (Test-Path $destinoVersion) {
         Remove-Item $destinoVersion -Recurse -Force
