@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — H6.1: importación con vista previa y lotes
+
+- Vista previa obligatoria de CSV/XLSX antes de escribir; se confirman las filas válidas.
+- Lote auditable (`Importaciones`, esquema v18) con hash, conteos y estado; productos y movimientos iniciales ligados al lote.
+- Reversión compensatoria: devuelve el stock, desactiva productos y deja bitácora; se bloquea si el lote ya tuvo movimientos ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)).
+- Plantilla CSV compartible con dos ejemplos.
+- 9 pruebas nuevas; suite completa: 468. Pendiente H6.2 (tickets en espera) y H6.3 (búsqueda medida).
+
 ## 2026-11-25 — H5: instalación, actualización y reversión
 
 - Paquete de Windows con `manifiesto.json` (versión de app y esquema) y scripts `h5-empaquetar.ps1` / `h5-instalar.ps1`.
