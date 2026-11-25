@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-25 — H4.2: bitácora atómica
+
+- La bitácora de venta, anulación, abono, gasto, movimiento de caja, corte, compra y pago se escribe en la misma transacción que la operación ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)).
+- Si la bitácora falla, la operación se revierte: no quedan movimientos de dinero sin auditoría.
+- Pendiente: inventario, altas/ediciones, usuarios y respaldos.
+
 ## 2026-11-25 — H4.1: caja y reportes caracterizados
 
 - 5 pruebas de caracterización de caja y reportes con un escenario completo (ventas efectivo/tarjeta/mixto/fiado, abono, ingreso, retiro y gastos).
