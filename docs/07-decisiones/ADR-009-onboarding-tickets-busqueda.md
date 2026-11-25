@@ -62,4 +62,9 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 - `BusquedaRendimientoTests`: 3000 productos, umbrales anti-regresión, tope de 200
   resultados, prefijos del escáner, código antes que nombre y acentos.
 - Suite completa: 483 pruebas.
-- Pendiente: verificar la vista previa, **Lotes**, **Guardar en espera** y **En espera** en Windows y Android con datos reales.
+- Android verificado el 2026-11-25 en POCO X6 Pro 5G / Android 16 con 3053 productos:
+  Lotes, búsqueda `cafe`, código completo, guardar/retomar/cobrar ticket, persistencia
+  tras reinicio y descarte auditado. Se corrigió el formato de moneda en **En espera**.
+  Detalle en `verificacion-h6-android.md`.
+- Pendiente: vista previa de importación y reversión de lote desde la interfaz en
+  Android, escáner físico de 13 dígitos y medición instrumentada de milisegundos.
