@@ -53,11 +53,11 @@ El encabezado completo se autentica como dato asociado. La extensión del archiv
 - DPAPI ata la clave al usuario y equipo de Windows: reinstalar Windows invalida la copia local, por eso la tarjeta es obligatoria.
 - En Android, el Keystore puede invalidarse al cambiar el bloqueo de pantalla; hay que probarlo en dispositivo.
 
-## Pendiente (H2.3b)
+## Cierre H2.3b (2026-11-25)
 
-- Activación guiada en el asistente inicial de tiendas nuevas, con tarjeta impresa y restauración de prueba antes de terminar.
-- Cifrar también el paquete de soporte cuando incluye la base.
-- Verificar DPAPI en Windows y Keystore en un Android físico; restaurar en otro equipo con la tarjeta.
+- El **asistente inicial** ofrece activar el cifrado, muestra la tarjeta y deja la tienda nueva protegida; si el dueño dice «ahora no», se avisa que los respaldos quedan sin cifrar. Queda pendiente la restauración de prueba guiada dentro del asistente.
+- El **paquete de soporte** se cifra con la misma clave cuando está disponible y el resumen indica si va cifrado.
+- **Verificado:** DPAPI en Windows y Keystore en un POCO X6 Pro 5G (Android 16): clave persistente tras reiniciar, respaldos `.db.stb` y restauración cifrada con `antes-restaurar`. **Pendiente:** restaurar en otro equipo con la tarjeta y la prueba guiada dentro del asistente.
 
 ## Verificación
 

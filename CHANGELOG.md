@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-25 — Cierre H2.3b y verificación Android
+
+- El asistente inicial ofrece activar el cifrado con tarjeta de recuperación; el paquete de soporte se cifra con la misma clave.
+- **Android verificado** en POCO X6 Pro 5G (Android 16): el asistente generó la clave, el respaldo automático y el manual se guardaron como `.db.stb`, la clave sobrevivió al reinicio (Keystore) y la restauración cifrada creó `antes-restaurar`.
+- 2 pruebas nuevas (424 en total). CI en verde (run `45652514886`) y fusionada a `main` (`9f7fe92`).
+- Pendiente: restaurar en otro equipo con la tarjeta, prueba de restauración guiada en el asistente y bloqueo en Android.
+
 ## 2026-11-24 — H2.3: respaldos cifrados
 
 - Clave de respaldo de 120 bits en DPAPI/SecureStorage y tarjeta de recuperación; AES-256-GCM + PBKDF2-SHA256 (600k).

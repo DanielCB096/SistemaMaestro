@@ -50,16 +50,18 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **Corrección Android:** `fix/android-soporte-cache`, commit `67af2a5`, 378/378 pruebas. CI en verde (run `45424725218`). Fusionada a `main` por fast-forward (`84dc8e1..67af2a5`) porque la cuenta de Edge no puede abrir PR (`must be a collaborator`).
 - **Limpieza de advertencias:** `chore/instancia-unica-warnings`, commit `82aa23e`, CI verde (run `45442442966`); Android queda en 0 advertencias. Fusionada a `main` por fast-forward (`67af2a5..82aa23e`).
 - **H2.3 hecho y fusionado** (`dc7b80c`, CI `45512214039`): respaldos cifrados con AES-256-GCM + PBKDF2 (600k), clave en DPAPI/SecureStorage, tarjeta de recuperación y restauración con clave; ver [ADR-004](docs/07-decisiones/ADR-004-respaldos-cifrados.md). Pendiente H2.3b: activación guiada en el asistente, paquete de soporte cifrado y verificación en Android.
+- **H2.3b hecho y fusionado** (`9f7fe92`): el asistente ofrece el cifrado y el paquete de soporte se cifra; Keystore verificado en Android.
 - **H2.2 hecho y fusionado** (`06a7c11`, CI `45501565476`): bloqueo persistente (5 intentos, 3 minutos, estado en `EstadoAcceso`), timeout de inactividad configurable (2–15 min) y manejador global de errores en `logs/errores.log`; 408 pruebas.
 - **H2.1 hecho y fusionado** (`881bfc8`, CI `45496679264`): permisos por acción según [ADR-003](docs/07-decisiones/ADR-003-permisos-accion.md). `VerCostos` por usuario; el encargado no ve costos salvo concesión; 403 pruebas.
 - **Skills:** 6 P0 instaladas; P1/P2 definidas en el catálogo.
 - **Graphify:** instalado (`0.9.114`) y skill visible en OpenCode y `~/.agents/skills`; el grafo de `tienda` no se versiona.
+- **Pendientes de H2:** restaurar en otro equipo con la tarjeta, restauración guiada en el asistente y bloqueo/inactividad en Android. Keystore ya se verificó en un Android físico. Ver [`docs/09-pendientes/h2-pendientes.md`](docs/09-pendientes/h2-pendientes.md).
 - **Pendientes post-H1:** otro equipo/tablet, corte de energía real y acceso de colaborador en GitHub. P3 (dueño no técnico) **completado** el 2026-11-24; **P6 (ruta de respaldo)** cerrado en `53a35fe` (`main` `290cde6`); **P8 (búsqueda dinámica)** en `c57fef0`; **P7 (QR)** en `28f66e4` y **escaneado con un teléfono real**. Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md). Ver [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md).
 - **Datos de prueba:** `tienda` incluye `SistemaTienda.Semilla` con escenarios `limpio`, `configurado` y `demo`; `scripts/p3-preparar.ps1 -Semilla` los aplica a la app aislada. `limpio` sigue siendo el valor por defecto para P3.
 
 ## Siguiente paso
 
-1. Cerrar H2.3b (activación guiada en el asistente, paquete de soporte cifrado y verificación en Android).
+1. Cerrar los pendientes de H2: restaurar en otro equipo con la tarjeta, restauración guiada en el asistente y bloqueo en Android.
 2. Pasar a H3: pruebas de caracterización y una sola fuente de stock.
 2. Cerrar los pendientes de campo de [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía y acceso de colaborador.
 3. Bloqueo persistente, timeout de sesión, manejador global y respaldos cifrados.
