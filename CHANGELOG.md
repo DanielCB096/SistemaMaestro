@@ -5,7 +5,8 @@
 - 3000 productos medidos en Windows Release: 33.52 ms para sugerencias, 28.08 ms para nombre y 0.07 ms para código exacto.
 - Camino rápido para texto ASCII y una sola normalización por producto y consulta; tope de 200 resultados en la búsqueda por nombre.
 - 5 pruebas nuevas cubren prefijos del escáner, código antes que nombre y acentos ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)).
-- Suite completa: 483. Pendiente medir en el Android del piloto con el protocolo de [medicion-busqueda.md](../tienda/SistemaTienda/docs/07-pruebas/medicion-busqueda.md).
+- Suite completa: 483.
+- Verificado en Android el 2026-11-25 (POCO X6 Pro 5G / Android 16) con 3053 productos: búsqueda `cafe`, código completo, tickets que sobreviven reinicio, cobro, descarte y bitácora. Se corrigió el formato de moneda en **En espera**. Pendiente medición instrumentada y escáner físico.
 
 ## 2026-11-25 — H6.2: tickets en espera
 
