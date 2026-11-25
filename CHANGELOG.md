@@ -5,6 +5,7 @@
 - Nombre visible de la app: **POSale**; el repositorio, ApplicationId, carpeta de datos y manifiesto conservan `SistemaTienda` para no romper respaldos ni actualizaciones ([ADR-010](docs/07-decisiones/ADR-010-marca-posale.md)).
 - Icono SVG nuevo: canasta, etiqueta de precio y signo de peso en verde, crema y contorno casi negro; incluye foreground adaptativo y splash.
 - Paquete de Windows renombrado a `POSale-<versión>-win-x64.zip`.
+- Corregido el icono adaptativo: fondo solo verde y canasta únicamente en el foreground; el icono aparece a la izquierda de POSale en login, asistente, Ajustes e instancia duplicada.
 - Verificado el icono a 24–256 px en Windows; pendiente Android.
 
 ## 2026-11-25 — Piloto preparado

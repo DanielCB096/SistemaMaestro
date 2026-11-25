@@ -20,6 +20,9 @@ en el escritorio o en Android.
 - **Formato:** SVG editable para icono completo, foreground adaptativo y splash.
   Se revisó a 256, 96, 48, 32 y 24 px; el contorno y el signo de peso mantienen la
   lectura en tamaños pequeños.
+- **Uso en la interfaz:** el icono aparece a la izquierda del nombre POSale en login,
+  asistente inicial, Ajustes y la pantalla de instancia duplicada. El fondo del icono
+  adaptativo es solo verde y la canasta vive en el foreground, para no duplicarla.
 
 ### Identificadores que NO cambian
 
