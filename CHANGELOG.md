@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — H4.1: caja y reportes caracterizados
+
+- 5 pruebas de caracterización de caja y reportes con un escenario completo (ventas efectivo/tarjeta/mixto/fiado, abono, ingreso, retiro y gastos).
+- Bug corregido: un gasto de caja pagado con tarjeta reducía el efectivo esperado. Ahora caja exige efectivo y el corte filtra por método ([ADR-006](docs/07-decisiones/ADR-006-gasto-caja-efectivo.md)).
+- La venta mixta no se duplica en el reporte: 240 + 260 + 200 = 700.
+- 435 pruebas en total. CI en verde (run `45666381652`) y fusionada a `main` (`95fea70`).
+- Pendiente de H4: bitácora dentro de la transacción.
+
 ## 2026-11-25 — H3: caracterización del inventario
 
 - 6 pruebas de caracterización: tras alta, entrada, merma, ajuste, venta, anulación y compra, el stock coincide con el log de movimientos.

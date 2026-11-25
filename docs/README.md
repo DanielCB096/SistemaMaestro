@@ -52,6 +52,7 @@
 - [ADR-003 — Matriz de permisos por acción](07-decisiones/ADR-003-permisos-accion.md)
 - [ADR-004 — Respaldos cifrados](07-decisiones/ADR-004-respaldos-cifrados.md)
 - [ADR-005 — El stock se deriva de los movimientos](07-decisiones/ADR-005-stock-movimientos.md)
+- [ADR-006 — Gasto de caja solo en efectivo](07-decisiones/ADR-006-gasto-caja-efectivo.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes
