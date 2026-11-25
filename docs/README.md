@@ -54,6 +54,7 @@
 - [ADR-005 — El stock se deriva de los movimientos](07-decisiones/ADR-005-stock-movimientos.md)
 - [ADR-006 — Gasto de caja solo en efectivo](07-decisiones/ADR-006-gasto-caja-efectivo.md)
 - [ADR-007 — Bitácora dentro de la transacción](07-decisiones/ADR-007-bitacora-transaccion.md)
+- [ADR-008 — Instalación, actualización y reversión](07-decisiones/ADR-008-instalacion-actualizacion.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

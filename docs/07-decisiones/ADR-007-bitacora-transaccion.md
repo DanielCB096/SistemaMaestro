@@ -1,8 +1,8 @@
 # ADR-007 — Bitácora dentro de la transacción
 
 - **Fecha:** 2026-11-25
-- **Estado:** Aceptado; cobertura parcial
-- **Hito:** H4.2
+- **Estado:** Aceptado; cobertura completa salvo respaldos
+- **Hito:** H4.2 y H4.2b
 
 ## Contexto
 
@@ -26,14 +26,19 @@ Los servicios registraban la bitácora **después** de que la operación se conf
 | Corte de caja | Atómica |
 | Compra a proveedor | Atómica |
 | Pago a proveedor | Atómica |
+| Entrada de inventario | Atómica |
+| Merma | Atómica |
+| Ajuste de inventario | Atómica |
+| Alta y edición de productos | Atómica |
+| Alta y edición de clientes | Atómica |
+| Alta y edición de proveedores | Atómica |
+| Usuarios, PIN y permisos | Atómica |
+| Configuración de la tienda | Atómica |
 
-### Pendiente
+### Fuera de la transacción
 
-- Entrada, merma y ajuste de inventario.
-- Alta/edición de productos, clientes y proveedores.
-- Usuarios, configuración, PIN, respaldos y exportaciones.
-
-Se migrarán con el mismo patrón; mientras tanto su auditoría sigue siendo posterior a la operación.
+- **Respaldos**: el archivo vive fuera de SQLite y se registra después de crearlo y verificarlo. No hay forma de abarcar archivo y base en una sola transacción.
+- **Exportaciones**: son lecturas; no cambian datos y no requieren bitácora.
 
 ## Consecuencias
 
@@ -44,5 +49,6 @@ Se migrarán con el mismo patrón; mientras tanto su auditoría sigue siendo pos
 ## Verificación
 
 - Las pruebas de bitácora existentes siguen en verde: la entrada se crea una sola vez y con el mismo detalle.
-- La caracterización de caja y reportes sigue en verde.
-- Suite completa: 435 pruebas.
+- `BitacoraTransaccionTests` cubre las nuevas operaciones y la reversión de entrada, gasto y venta cuando la bitácora falla.
+- La caracterización de caja, reportes e inventario sigue en verde.
+- Suite completa: 442 pruebas.

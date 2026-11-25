@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-11-25 — H5: instalación, actualización y reversión
+
+- Paquete de Windows con `manifiesto.json` (versión de app y esquema) y scripts `h5-empaquetar.ps1` / `h5-instalar.ps1`.
+- `ActualizadorEsquema` respalda, migra, verifica con un arranque de prueba y restaura el respaldo si algo falla; la versión anterior de los datos sigue operativa ([ADR-008](docs/07-decisiones/ADR-008-instalacion-actualizacion.md)).
+- Instalación por versiones con puntero `actual.json` y `-Revertir` para volver a la carpeta anterior sin tocar los datos.
+- Los CSV neutralizan fórmulas y el filtro por día local quedó fijado con una prueba de borde.
+- 17 pruebas nuevas; suite completa: 459.
+
+## 2026-11-25 — H4.2b: bitácora atómica ampliada
+
+- Inventario (entrada, merma, ajuste), productos, clientes, proveedores, usuarios/PIN/permisos y configuración escriben su bitácora en la misma transacción ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)).
+- Si la bitácora falla, la operación se revierte: el stock y los saldos quedan intactos.
+- Los respaldos siguen registrándose después de crear el archivo, porque viven fuera de SQLite.
+- 7 pruebas nuevas; suite completa: 442.
+
 ## 2026-11-25 — H4.2: bitácora atómica
 
 - La bitácora de venta, anulación, abono, gasto, movimiento de caja, corte, compra y pago se escribe en la misma transacción que la operación ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)).
