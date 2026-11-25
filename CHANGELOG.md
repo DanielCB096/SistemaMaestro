@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-25 — H6.3: búsqueda medida y escaneo sin pérdida
+
+- 3000 productos medidos en Windows Release: 33.52 ms para sugerencias, 28.08 ms para nombre y 0.07 ms para código exacto.
+- Camino rápido para texto ASCII y una sola normalización por producto y consulta; tope de 200 resultados en la búsqueda por nombre.
+- 5 pruebas nuevas cubren prefijos del escáner, código antes que nombre y acentos ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)).
+- Suite completa: 483. Pendiente medir en el Android del piloto con el protocolo de [medicion-busqueda.md](../tienda/SistemaTienda/docs/07-pruebas/medicion-busqueda.md).
+
 ## 2026-11-25 — H6.2: tickets en espera
 
 - Carritos persistidos en SQLite (`TicketsEspera` y `TicketEsperaLineas`, esquema v19), sin reservar stock.

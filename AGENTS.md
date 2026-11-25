@@ -53,6 +53,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **H3 hecho:** caracterización del inventario y reconciliación del stock ([ADR-005](docs/07-decisiones/ADR-005-stock-movimientos.md)); 430 pruebas.
 - **H4 hecho:** gasto de caja solo en efectivo ([ADR-006](docs/07-decisiones/ADR-006-gasto-caja-efectivo.md)) y bitácora atómica en dinero, inventario, catálogo, clientes, proveedores, usuarios y configuración ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)); 442 pruebas.
 - **H4.2b y H5 fusionados en `main` de `tienda`** (`f2f4110` y `0b15fe6`, CI `45684057019` en verde).
+- **H6.3 hecho:** búsqueda medida con 3000 productos (33.52 ms sugerencias, 28.08 ms nombre, 0.07 ms código en Windows Release), optimización ASCII y pruebas de escáner; 483 pruebas. H6 cerrado en código; pendiente medir en el Android del piloto.
 - **H6.2 hecho:** tickets en espera persistidos, sin reservar stock, precios recalculados con aviso, máximo 10 y venta atómica que cierra el ticket ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)); 478 pruebas. Pendiente H6.3 (búsqueda medida).
 - **H6.1 hecho:** importación con vista previa, lote auditable, plantilla y reversión compensatoria ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)); 468 pruebas. Pendiente H6.2 (tickets en espera) y H6.3 (búsqueda medida en Android).
 - **H5 hecho:** manifiesto de versión/esquema, actualizador con respaldo, verificación y restauración automática, paquete de Windows por versiones con `-Revertir` y CSV sin fórmulas ([ADR-008](docs/07-decisiones/ADR-008-instalacion-actualizacion.md)); 459 pruebas. Pendiente: instalar en una máquina limpia y probar un corte de energía real.
@@ -68,6 +69,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 ## Siguiente paso
 
 1. Cerrar los pendientes de H2: restaurar en otro equipo con la tarjeta, restauración guiada en el asistente y bloqueo en Android.
-2. Verificar H5 en una máquina limpia y con corte de energía real; continuar H6.3 (búsqueda medida) y verificar H6.1/H6.2 en Windows y Android.
+2. Verificar H6.1/H6.2/H6.3 en Windows y Android; medir la búsqueda en el equipo del piloto.
+3. Preparar el piloto: un abarrotes real, una caja, usuarios definidos y 30 días.
 3. Cerrar los pendientes de campo de [`docs/09-pendientes/h1-post-merge.md`](docs/09-pendientes/h1-post-merge.md): otro equipo, corte de energía y acceso de colaborador.
 

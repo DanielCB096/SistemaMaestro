@@ -1,7 +1,7 @@
 # ADR-009 — Onboarding, tickets en espera y búsqueda
 
 - **Fecha:** 2026-11-25
-- **Estado:** Aceptado; H6.1 y H6.2 implementados, H6.3 pendiente
+- **Estado:** Aceptado; H6.1, H6.2 y H6.3 implementados
 - **Hito:** H6
 
 ## Contexto
@@ -34,11 +34,18 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 - La venta cierra el ticket (`Estado = Cobrado`, `VentaId`) dentro de la misma transacción que el stock; si el ticket no está retomado por quien cobra, la venta se revierte.
 - Un ticket retomado que queda huérfano por un cierre inesperado se libera a los 30 minutos.
 
-### Búsqueda (H6.3, pendiente)
+### Búsqueda (H6.3)
 
 - Mantener SQLite y la normalización actual (sin acentos ni mayúsculas); sin FTS5 ni caché global.
-- Medir 3000 productos en Windows y Android antes de optimizar.
-- Escaneo por código de barras: coincidencia exacta primero, sin perder dígitos.
+- Medir con 3000 productos antes de optimizar. En Windows Release: 33.52 ms por
+  sugerencias, 28.08 ms por nombre y 0.07 ms por código exacto; el POS espera
+  250 ms desde la última tecla.
+- Optimización aplicada: camino rápido para texto ASCII y una sola normalización
+  por producto y consulta. `BuscarPorNombre` limita a 200 resultados.
+- Escaneo por código de barras: coincidencia exacta primero, prefijo después, sin
+  perder dígitos. La medición en Android queda para el equipo del piloto.
+- Si el equipo real supera 300 ms o se siente lento, medir antes de evaluar FTS5 o
+  caché; no se adelanta complejidad.
 
 ## Consecuencias
 
@@ -52,5 +59,7 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 - `ImportacionLotesTests`: vista previa sin escritura, lote y vínculos, 3000 filas en un lote, reversión limpia, bloqueo por venta, fallo de inserción sin residuos, permiso de empleado y migración v17 → v18.
 - `PlantillaProductos` se previsualiza con dos filas válidas.
 - `TicketsEsperaTests`: guardar sin mover stock ni caja, máximo 10, precio actual y cambio, retomar, bloqueo de otro cajero, descarte auditado, venta que cierra el ticket, doble cobro rechazado, liberación por vencimiento y migración v18 → v19.
-- Suite completa: 478 pruebas.
+- `BusquedaRendimientoTests`: 3000 productos, umbrales anti-regresión, tope de 200
+  resultados, prefijos del escáner, código antes que nombre y acentos.
+- Suite completa: 483 pruebas.
 - Pendiente: verificar la vista previa, **Lotes**, **Guardar en espera** y **En espera** en Windows y Android con datos reales.
