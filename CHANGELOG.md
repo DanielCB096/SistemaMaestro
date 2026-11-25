@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — H6.2: tickets en espera
+
+- Carritos persistidos en SQLite (`TicketsEspera` y `TicketEsperaLineas`, esquema v19), sin reservar stock.
+- POS con **Guardar en espera** y **En espera**; al retomar se recalculan precios y stock, se avisan cambios y se bloquea si el producto no está disponible.
+- Máximo 10 tickets, descarte manual auditado y liberación a los 30 minutos si un cajero cierra la app sin cobrar ([ADR-009](docs/07-decisiones/ADR-009-onboarding-tickets-busqueda.md)).
+- La venta cierra el ticket en la misma transacción; un ticket ajeno o ya cobrado revierte la venta completa.
+- 10 pruebas nuevas; suite completa: 478.
+
 ## 2026-11-25 — H6.1: importación con vista previa y lotes
 
 - Vista previa obligatoria de CSV/XLSX antes de escribir; se confirman las filas válidas.

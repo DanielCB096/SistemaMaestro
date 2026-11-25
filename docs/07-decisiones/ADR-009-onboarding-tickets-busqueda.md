@@ -1,7 +1,7 @@
 # ADR-009 — Onboarding, tickets en espera y búsqueda
 
 - **Fecha:** 2026-11-25
-- **Estado:** Aceptado; H6.1 implementado, H6.2 y H6.3 pendientes
+- **Estado:** Aceptado; H6.1 y H6.2 implementados, H6.3 pendiente
 - **Hito:** H6
 
 ## Contexto
@@ -22,7 +22,7 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 - **Bloqueo**: si algún producto del lote tiene ventas, compras u otro movimiento ajeno al lote, la reversión se rechaza y se sugiere desactivar los productos. La regla del historial no tiene excepciones.
 - **Duplicados**: se rechazan códigos repetidos dentro del archivo y contra el catálogo antes de escribir. El hash del archivo queda guardado para soporte; no se bloquea reimportar un archivo corregido.
 
-### Tickets en espera (H6.2, pendiente)
+### Tickets en espera (H6.2)
 
 - Persistir en SQLite (`TicketsEspera` y líneas), no en memoria.
 - **No reservar stock**: se valida al cobrar, igual que una venta normal.
@@ -30,6 +30,9 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 - Máximo 10 tickets por equipo, nota opcional, visibles para quien tenga permiso de vender.
 - Sin caducidad automática; descarte manual.
 - Auditar dejar, retomar y descartar; descartar no borra la evidencia.
+- Persistencia: `TicketsEspera` y `TicketEsperaLineas` (esquema v19). El ticket guarda el precio congelado por línea para avisar cambios.
+- La venta cierra el ticket (`Estado = Cobrado`, `VentaId`) dentro de la misma transacción que el stock; si el ticket no está retomado por quien cobra, la venta se revierte.
+- Un ticket retomado que queda huérfano por un cierre inesperado se libera a los 30 minutos.
 
 ### Búsqueda (H6.3, pendiente)
 
@@ -48,5 +51,6 @@ Se consultó a Claude, Gemini y ChatGPT. Las tres respuestas coincidieron en: no
 
 - `ImportacionLotesTests`: vista previa sin escritura, lote y vínculos, 3000 filas en un lote, reversión limpia, bloqueo por venta, fallo de inserción sin residuos, permiso de empleado y migración v17 → v18.
 - `PlantillaProductos` se previsualiza con dos filas válidas.
-- Suite completa: 468 pruebas.
-- Pendiente: verificar la vista previa y el botón **Lotes** en Windows y Android con un archivo real.
+- `TicketsEsperaTests`: guardar sin mover stock ni caja, máximo 10, precio actual y cambio, retomar, bloqueo de otro cajero, descarte auditado, venta que cierra el ticket, doble cobro rechazado, liberación por vencimiento y migración v18 → v19.
+- Suite completa: 478 pruebas.
+- Pendiente: verificar la vista previa, **Lotes**, **Guardar en espera** y **En espera** en Windows y Android con datos reales.
