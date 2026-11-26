@@ -8,6 +8,12 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-26 — Reportes por producto/categoría y edición de gastos
+
+- Reportes agrega productos más vendidos y ventas por categoría; CSV y PDF incluyen ambos desgloses.
+- Los gastos se pueden editar (concepto, monto, método, origen y observaciones) mientras no estén en un corte cerrado ([ADR-012](docs/07-decisiones/ADR-012-edicion-gastos.md)).
+- 7 pruebas nuevas; suite completa: 499.
+
 ## 2026-11-26 — Historial de ventas por rango
 
 - Pestaña **Ventas** con filtros Desde/Hasta, Hoy y Este mes; resumen del rango y fecha/hora por venta.

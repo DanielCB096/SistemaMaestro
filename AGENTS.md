@@ -53,6 +53,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **H3 hecho:** caracterización del inventario y reconciliación del stock ([ADR-005](docs/07-decisiones/ADR-005-stock-movimientos.md)); 430 pruebas.
 - **H4 hecho:** gasto de caja solo en efectivo ([ADR-006](docs/07-decisiones/ADR-006-gasto-caja-efectivo.md)) y bitácora atómica en dinero, inventario, catálogo, clientes, proveedores, usuarios y configuración ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)); 442 pruebas.
 - **H4.2b y H5 fusionados en `main` de `tienda`** (`f2f4110` y `0b15fe6`, CI `45684057019` en verde).
+- **Reportes y gastos:** productos/categorías en Reportes y edición de gastos con bloqueo tras corte cerrado ([ADR-012](docs/07-decisiones/ADR-012-edicion-gastos.md)); 499 pruebas.
 - **Ventas por rango:** historial en la pestaña Ventas con Desde/Hasta, Hoy y Este mes; 492 pruebas.
 - **Marca:** nombre visible **POSale** y logo de canasta/etiqueta/peso ([ADR-010](docs/07-decisiones/ADR-010-marca-posale.md)); identificadores internos y ruta de datos siguen como `SistemaTienda`.
 - **Piloto preparado:** plan, instalación/día 0, checklist, capacitación, tarjeta, guion de 30 días, incidencias, privacidad y criterios en `tienda/SistemaTienda/docs/08-piloto`; kit con `scripts/piloto-preparar.ps1` probado con paquete simulado. No se instaló en una tienda real.
