@@ -1,6 +1,6 @@
 # Pendientes de H2
 
-**Estado:** abiertos, anotados para después.
+**Estado:** A1 y A3 implementados; A2, A4 y A5 dependen de equipo o persona.
 **Fecha:** 2026-11-25.
 **Contexto:** H2.1 (permisos), H2.2 (sesión) y H2.3 (respaldos cifrados) están implementados y fusionados. El Keystore de Android se verificó el 2026-11-25; quedan verificaciones que dependen de otro equipo o de una persona.
 
@@ -10,7 +10,7 @@
 |---|---|---|---|---|---|
 | A1 | Keystore en Android | **Completado** | Verificado el 2026-11-25 en POCO X6 Pro 5G (Android 16) | Asistente con cifrado, respaldo automático y manual `.db.stb`, reinicio y restauración | La clave sobrevivió al reinicio y la restauración creó `antes-restaurar` |
 | A2 | Restaurar en otro equipo con la tarjeta | Alta | Es la promesa central del cifrado: sin la tarjeta, el respaldo es irrecuperable | Llevar un `.db.stb` y la clave a otro equipo, restaurar | Los datos quedan íntegros y el respaldo previo se conserva |
-| A3 | Restauración guiada en el asistente | Media | El asistente ya ofrece activar el cifrado y muestra la tarjeta, pero no obliga a probar una restauración | Añadir al asistente una prueba con un respaldo recién creado antes de terminar | El dueño restaura una copia sin ayuda antes de usar la tienda |
+| A3 | Restauración guiada en el asistente | **Implementado** (2026-11-26) | El asistente y la pantalla de arranque fallido ahora permiten restaurar un respaldo; antes solo se podía desde Ajustes con sesión | Probar en Windows y Android: crear tienda, respaldar, limpiar, restaurar desde el asistente y entrar con el PIN; provocar un error de arranque y restaurar | El dueño restaura una copia sin ayuda y llega al login con los datos del respaldo |
 | A4 | Bloqueo por inactividad en Android | Media | Solo se probó en Windows | Dejar la caja sola los minutos configurados y volver | Aparece el bloqueo, el carrito se conserva y el PIN desbloquea |
 | A5 | Intentos fallidos en Android | Media | La lógica es común, pero el teclado y los mensajes cambian | Fallar 5 veces el PIN en el dispositivo | Bloqueo de 3 minutos y mensaje correcto |
 
@@ -27,4 +27,4 @@
 
 ## Nota
 
-Si el teléfono no está disponible, A1–A5 quedan pendientes; no bloquean H3. El cifrado en Windows (DPAPI) sí está verificado.
+Si el teléfono no está disponible, A2, A4 y A5 quedan pendientes; no bloquean el piloto.

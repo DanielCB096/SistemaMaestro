@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-26 — Restauración guiada en instalación nueva y arranque fallido
+
+- El asistente inicial ofrece **Restaurar un respaldo** cuando aún no hay usuarios; después se entra con el PIN del respaldo.
+- La pantalla de arranque fallido permite restaurar sin sesión con confirmación y clave, en vez de dejar al dueño sin salida ([ADR-011](docs/07-decisiones/ADR-011-restauracion-sin-sesion.md)).
+- La restauración desde Ajustes ahora cierra la app también en Android para que la base restaurada se abra limpia.
+- 6 pruebas nuevas; suite completa: 489. Pendiente prueba manual en Windows/Android.
+
 ## 2026-11-25 — Marca POSale e icono
 
 - Nombre visible de la app: **POSale**; el repositorio, ApplicationId, carpeta de datos y manifiesto conservan `SistemaTienda` para no romper respaldos ni actualizaciones ([ADR-010](docs/07-decisiones/ADR-010-marca-posale.md)).
