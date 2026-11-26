@@ -2,11 +2,23 @@
 
 Repositorio de diseño, decisiones y evolución de la plataforma modular para pequeños negocios en México.
 
-**Estado:** Fase 0 — auditoría, definición de producto y plan de 90 días.  
-**Producto inicial:** Tienda V2, con foco en abarrotes, purificadoras y minisúper.  
+**Estado:** H1–H6 implementados y verificados en Windows y Android; piloto de 30 días preparado, todavía no iniciado en una tienda real.  
+**Producto inicial:** POSale (Tienda V2), con foco en abarrotes, purificadoras y minisúper.  
 **Objetivo de largo plazo:** núcleo modular con verticales (retail, gimnasio y otros giros), licencias de pago único y funcionamiento local sin internet.
 
 > Este repositorio es la fuente de verdad de la documentación. Los repositorios `tienda` y `gym-dotnet` siguen siendo los sistemas en producción y no se modifican desde aquí.
+
+## Estado actual
+
+- **H1:** respaldo, restauración, WAL e instancia única; verificado en Windows y Android.
+- **H2:** permisos por acción, bloqueo persistente, timeout, manejador global y respaldos cifrados AES-256-GCM.
+- **H3–H4:** caracterización, stock por movimientos, gasto de caja único y bitácora atómica.
+- **H5:** instalador, actualización con respaldo/rollback y CSV seguro.
+- **H6:** importación con vista previa, tickets en espera y búsqueda medida con 3,000 productos.
+- **Marca:** POSale; identificadores internos siguen como `SistemaTienda`.
+- **Piloto:** kit, plan, capacitación y registro listos; falta ejecutarlo en una tienda real.
+- **Pendientes de campo:** otro equipo/tablet, corte de energía real, restauración con tarjeta, bloqueo en Android, instalación limpia y escáner físico. Ver [`docs/09-pendientes`](docs/09-pendientes).
+- **Open PRs heredadas:** #38 (`feat/restaurar-respaldos`) y #39 (`feat/ventas-historial`) siguen abiertas y atrasadas respecto a `main`; requieren decisión de cierre o rebase.
 
 ## Documentos clave
 

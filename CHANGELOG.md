@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-25 — Revisión de estado y documentación
+
+- Se actualiza el índice de ADRs con ADR-003 a ADR-010.
+- El README deja de decir “Fase 0” y refleja H1–H6 implementados, POSale y piloto preparado.
+- El roadmap agrega el estado real por hito y las puertas de campo pendientes.
+- Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
+- Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
+
 ## 2026-11-25 — Marca POSale e icono
 
 - Nombre visible de la app: **POSale**; el repositorio, ApplicationId, carpeta de datos y manifiesto conservan `SistemaTienda` para no romper respaldos ni actualizaciones ([ADR-010](docs/07-decisiones/ADR-010-marca-posale.md)).
