@@ -44,4 +44,4 @@ casos el dueño no podía llegar a Ajustes para recuperar su respaldo.
   restaura y recuperación sin sesión.
 - La app compila para Windows sin advertencias.
 - Suite completa: 489 pruebas.
-- Pendiente: prueba manual del asistente y de la pantalla de error.
+- Verificado en Windows el 2026-11-26 sobre la base P3: el servicio de instalación nueva restauró 3 usuarios, la tienda y 53 productos, y la app abrió en el login de esa tienda. Pendiente el clic del selector de archivos y la pantalla de error.
