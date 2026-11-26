@@ -59,6 +59,7 @@
 - [ADR-010 — Marca POSale e icono](07-decisiones/ADR-010-marca-posale.md)
 - [ADR-011 — Restauración guiada sin sesión](07-decisiones/ADR-011-restauracion-sin-sesion.md)
 - [ADR-012 — Edición de gastos](07-decisiones/ADR-012-edicion-gastos.md)
+- [ADR-013 — Descuento por producto](07-decisiones/ADR-013-descuento-por-producto.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

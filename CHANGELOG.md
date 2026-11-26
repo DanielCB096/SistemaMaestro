@@ -8,6 +8,11 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-26 — Descuento por producto
+
+- El POS aplica descuentos por producto en % o monto, con atajo para toda la venta, solo para dueño y encargado; IVA y comisión sobre el neto ([ADR-013](docs/07-decisiones/ADR-013-descuento-por-producto.md)).
+- Esquema v20/v21; 13 pruebas nuevas; suite completa: 513.
+
 ## 2026-11-26 — Reportes por producto/categoría y edición de gastos
 
 - Reportes agrega productos más vendidos y ventas por categoría; CSV y PDF incluyen ambos desgloses.
