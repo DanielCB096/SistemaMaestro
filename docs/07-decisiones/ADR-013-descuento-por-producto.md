@@ -1,7 +1,7 @@
 # ADR-013 — Descuento por producto
 
 - **Fecha:** 2026-11-26
-- **Estado:** Aceptado; verificación visual pendiente
+- **Estado:** Aceptado; verificado en Windows el 2026-11-26
 - **Hito:** Ventas Fase 2
 
 ## Contexto
@@ -68,4 +68,4 @@ renglón.
   otro), una sola línea rebajada, límites, permiso de empleado, IVA, comisión de
   tarjeta, reporte por producto, fiado y ticket.
 - Migración v20 → v21 cubierta en la misma suite.
-- Pendiente: prueba visual en Windows y Android.
+- Verificado en Windows el 2026-11-26: descuento por producto con % y monto, distintos por renglón, total y ticket correctos. Android pendiente.

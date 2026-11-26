@@ -11,7 +11,7 @@
 ## 2026-11-26 — Descuento por producto
 
 - El POS aplica descuentos por producto en % o monto, con atajo para toda la venta, solo para dueño y encargado; IVA y comisión sobre el neto ([ADR-013](docs/07-decisiones/ADR-013-descuento-por-producto.md)).
-- Esquema v20/v21; 13 pruebas nuevas; suite completa: 513.
+- Esquema v20/v21; 13 pruebas nuevas; suite completa: 513. Verificado en Windows el 2026-11-26.
 
 ## 2026-11-26 — Reportes por producto/categoría y edición de gastos
 
