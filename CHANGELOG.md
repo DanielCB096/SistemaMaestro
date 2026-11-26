@@ -8,6 +8,12 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-26 — Historial de ventas por rango
+
+- Pestaña **Ventas** con filtros Desde/Hasta, Hoy y Este mes; resumen del rango y fecha/hora por venta.
+- El detalle, la reimpresión y la anulación siguen disponibles para las ventas del rango.
+- 3 pruebas nuevas; suite completa: 492.
+
 ## 2026-11-26 — Restauración guiada en instalación nueva y arranque fallido
 
 - El asistente inicial ofrece **Restaurar un respaldo** cuando aún no hay usuarios; después se entra con el PIN del respaldo.
