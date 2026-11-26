@@ -13,7 +13,8 @@
 - El asistente inicial ofrece **Restaurar un respaldo** cuando aún no hay usuarios; después se entra con el PIN del respaldo.
 - La pantalla de arranque fallido permite restaurar sin sesión con confirmación y clave, en vez de dejar al dueño sin salida ([ADR-011](docs/07-decisiones/ADR-011-restauracion-sin-sesion.md)).
 - La restauración desde Ajustes ahora cierra la app también en Android para que la base restaurada se abra limpia.
-- 6 pruebas nuevas; suite completa: 489. Pendiente prueba manual en Windows/Android.
+- 6 pruebas nuevas; suite completa: 489.
+- Verificado en Windows el 2026-11-26: botón del asistente, ruta, confirmación y PIN del respaldo. Windows pide la ruta porque los selectores nativos fallan sin empaquetar; Android mantiene el selector.
 
 ## 2026-11-25 — Marca POSale e icono
 

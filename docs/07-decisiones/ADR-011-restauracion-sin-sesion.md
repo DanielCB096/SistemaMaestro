@@ -21,6 +21,9 @@ casos el dueño no podía llegar a Ajustes para recuperar su respaldo.
 - **Condiciones en ambos casos:** confirmación explícita, clave de 24 caracteres si
   el archivo es `.db.stb`, respaldo de seguridad `antes-restaurar` y aviso de que se
   reemplaza la base.
+- **Windows:** los selectores de MAUI/WinRT fallan con `0x80004005` en la app sin
+  empaquetar; se pide la ruta del archivo en un cuadro de texto. Android usa el
+  selector del sistema.
 - **Después de restaurar:** se navega al login; el dueño entra con los usuarios del
   respaldo. No se conserva la sesión anterior.
 - **Sin bitácora en la base reemplazada:** la operación ocurre antes de tener una
@@ -44,4 +47,4 @@ casos el dueño no podía llegar a Ajustes para recuperar su respaldo.
   restaura y recuperación sin sesión.
 - La app compila para Windows sin advertencias.
 - Suite completa: 489 pruebas.
-- Verificado en Windows el 2026-11-26 sobre la base P3: el servicio de instalación nueva restauró 3 usuarios, la tienda y 53 productos, y la app abrió en el login de esa tienda. Pendiente el clic del selector de archivos y la pantalla de error.
+- Verificado en Windows el 2026-11-26 sobre la base P3: se pulsó **Restaurar un respaldo**, se pegó la ruta, se confirmó y el PIN 1234 entró a la tienda restaurada (3 usuarios, 53 productos). Pendiente la pantalla de arranque fallido, Android y un selector más amable en Windows.
