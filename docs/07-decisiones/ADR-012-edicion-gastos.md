@@ -1,7 +1,7 @@
 # ADR-012 — Edición de gastos
 
 - **Fecha:** 2026-11-26
-- **Estado:** Aceptado; prueba visual pendiente
+- **Estado:** Aceptado; verificado en Windows el 2026-11-26
 - **Hito:** Reportes y operación
 
 ## Contexto
@@ -39,4 +39,4 @@ haría que el efectivo esperado ya no coincidiera con lo entregado.
   rechazo de caja con tarjeta y rechazo para empleado.
 - `ReportesTests` y `ExportadorCsvTests`: productos y categorías, exclusión de
   anuladas y exportación.
-- Pendiente: prueba visual del editor en Windows y Android.
+- Verificado en Windows el 2026-11-26: el dueño abrió un gasto, cambió los campos, guardó y la fecha quedó intacta. Android pendiente.
