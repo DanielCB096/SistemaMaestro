@@ -34,6 +34,20 @@ costo. La entrada manual era la excepción.
 - Las ventas siguientes congelan el costo nuevo. Las ventas anteriores
   conservan el costo con el que se registraron.
 
+### Precio de venta
+
+- Cuando el costo cambia, la pantalla calcula un **precio sugerido** que conserva
+  el margen **en pesos**: `precio nuevo = costo nuevo + (precio actual − costo
+  actual)`. Es la regla del ejemplo $12→$13, $18→$19.
+- El precio **no cambia solo**. El dueño ve la casilla **“Actualizar el precio a
+  $X (conservar margen)”**, desmarcada por defecto, y decide si la aplica.
+- Si el usuario no tiene `CambiarPrecios` (el encargado), la casilla no aparece:
+  puede actualizar el costo, pero el precio lo cambia el dueño.
+- El precio se guarda en la misma transacción que la entrada y su bitácora.
+- La sugerencia nunca baja de un centavo; si el margen actual es negativo, el
+  precio sugerido queda por debajo del costo nuevo y la interfaz lo muestra con
+  el margen resultante.
+
 ## Consecuencias
 
 - El valorizado y la utilidad reflejan la última compra sin pasos extra.
@@ -47,5 +61,6 @@ costo. La entrada manual era la excepción.
 ## Verificación
 
 - `CostoEntradaTests`: actualización atómica, casilla desmarcada, costo cero,
-  costo igual, costo congelado de la siguiente venta, encargado y empleado.
+  costo igual, costo congelado de la siguiente venta, precio sugerido con margen
+  en pesos, precio aplicado, precio cero y encargado sin permiso de precio.
 - Pendiente: prueba visual en Windows y Android.

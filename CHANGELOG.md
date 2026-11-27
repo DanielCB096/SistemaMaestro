@@ -11,7 +11,8 @@
 ## 2026-11-27 — Costo del catálogo al registrar entradas
 
 - La entrada de inventario actualiza `Productos.Costo` con el costo capturado, con casilla para conservar el actual y bitácora atómica ([ADR-014](docs/07-decisiones/ADR-014-costo-entrada.md)).
-- 7 pruebas nuevas; suite completa: 521.
+- El dueño puede aplicar un precio sugerido que conserva el margen en pesos; la casilla está desmarcada por defecto.
+- 11 pruebas nuevas; suite completa: 525.
 
 ## 2026-11-26 — Ventas por día
 
