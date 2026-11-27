@@ -1,7 +1,7 @@
 # ADR-016 — Licencia offline sin bloqueo
 
 - **Fecha:** 2026-11-27
-- **Estado:** Aceptado; verificación visual pendiente
+- **Estado:** Aceptado; verificado en Windows el 2026-11-27
 - **Hito:** Comercialización de POSale
 
 ## Contexto
@@ -51,4 +51,5 @@ dueño es **solo avisar**.
   importación con bitácora, firma inválida, empleado sin permiso, soporte vencido
   y producto equivocado.
 - Herramienta `SistemaTienda.Licencias`: generar llaves, emitir y verificar.
-- Pendiente: prueba visual en Windows y Android.
+- Verificado en Windows el 2026-11-27: Inicio sin aviso y Ajustes con la licencia activa de Abarrotes La Esquina (POS-DEMO-001). Android pendiente.
+- La llave pública se incluye como constante compilada; el intento de recurso embebido se descartó porque no se encontraba al ejecutar.

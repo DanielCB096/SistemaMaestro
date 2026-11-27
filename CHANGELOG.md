@@ -11,7 +11,7 @@
 ## 2026-11-27 — Licencia offline
 
 - POSale agrega licencia perpetua firmada RSA-PSS, prueba de 30 días y avisos sin bloqueo; herramienta de emisión `SistemaTienda.Licencias` ([ADR-016](docs/07-decisiones/ADR-016-licencia-offline.md)).
-- 10 pruebas nuevas; suite completa: 545.
+- 10 pruebas nuevas; suite completa: 545. Verificado en Windows el 2026-11-27.
 
 ## 2026-11-27 — Simulación de un día completo
 
