@@ -21,6 +21,7 @@
 - [Definición de Tienda V2](03-producto/definicion-v2.md)
 - [Precios y soporte](03-producto/precios-y-soporte.md)
 - [Piloto](03-producto/piloto.md)
+- [Taller & Servicio Express](03-producto/taller-servicio-express.md)
 
 ## 04 — Operación
 
@@ -64,6 +65,7 @@
 - [ADR-015 — Reembolso de ventas anuladas](07-decisiones/ADR-015-reembolso-anulacion.md)
 - [ADR-016 — Licencia offline sin bloqueo](07-decisiones/ADR-016-licencia-offline.md)
 - [ADR-017 — Clara como producto independiente](07-decisiones/ADR-017-clara-independiente.md)
+- [ADR-018 - Taller & Servicio Express](07-decisiones/ADR-018-taller-servicio-express.md)
 - [Clara — finanzas personales del dueño](03-producto/clara-finanzas.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 

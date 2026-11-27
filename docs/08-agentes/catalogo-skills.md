@@ -22,6 +22,7 @@
 | 11 | `producto-piloto` | contexto | P1 | Alcance, cliente ideal, exclusiones y aceptación | Inicio de tarea o cambio de alcance | ChatGPT/Gemini | definida |
 | 12 | `adr-decisiones` | contexto | P1 | Contexto, decisión, consecuencias y evidencia | Decisión estructural o cierre de hito | Claude/DeepSeek | definida |
 | 13 | `graphify` | herramienta | P2 | Grafo consultable de código y documentos | Exploración, impacto y desmontaje | DeepSeek | instalada |
+| 14 | [`preguntar-a-las-ias`](skills/preguntar-a-las-ias/SKILL.md) | herramienta | P2 | Debate multi-modelo en el navegador: roles, dos rondas y síntesis | Decisiones de producto, arquitectura, precios o UX | DeepSeek/Claude | instalada |
 
 ## Criterios de prioridad
 
@@ -100,6 +101,14 @@ Plantilla ligera de contexto, decisión, consecuencias y evidencia. Se activa al
 #### `graphify`
 
 Herramienta instalada. Genera un grafo AST del código de `tienda` y un grafo semántico de documentos cuando hay backend. Se usa para explorar impacto y desmontar `DatabaseTools`; no se mantiene como dependencia obligatoria.
+
+#### `preguntar-a-las-ias`
+
+Herramienta instalada en la configuración del agente. Cuando el usuario dice
+«pregúntales a las IAs», abre ChatGPT, Claude y Gemini en el navegador, asigna un
+rol a cada uno, ejecuta dos rondas (propuestas y crítica cruzada) y guarda una
+síntesis con acuerdos, desacuerdos, recomendación y métrica. No simula opiniones:
+si un modelo no responde, se documenta.
 
 ## Mantenimiento
 

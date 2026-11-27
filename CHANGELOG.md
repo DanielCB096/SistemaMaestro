@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Siguiente producto: Taller & Servicio Express
+
+- Tres IAs debatieron dos rondas y coincidieron en un vertical de órdenes de reparación para celulares/electrónica, con Maestro Central solo como pieza interna.
+- Decisión y alternativas en [ADR-018](docs/07-decisiones/ADR-018-taller-servicio-express.md).
+- Producto, MVP, precio y validación en [taller-servicio-express.md](docs/03-producto/taller-servicio-express.md).
+- Nueva skill `preguntar-a-las-ias` para repetir este tipo de debate desde el navegador.
+
 ## 2026-11-27 — Clara 1.5.1: paquete de despliegue y handoff
 
 - Iconos y manifest corregidos (seguían siendo de la app de tareas); tema verde y nombre de finanzas.
