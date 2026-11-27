@@ -8,6 +8,12 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Simulación de un día completo
+
+- `DiaCompletoTests` valida un día con todos los tipos de venta, descuentos, reembolsos, abono, gasto, merma y compra contra reportes y caja.
+- El escenario `demo` incluye descuentos, una anulación reembolsada y un reembolso parcial.
+- 535 pruebas.
+
 ## 2026-11-27 — Reembolso de ventas anuladas
 
 - El detalle de la venta anulada registra reembolsos por método y en partes; el efectivo genera retiro de caja y el fiado no se reembolsa ([ADR-015](docs/07-decisiones/ADR-015-reembolso-anulacion.md)).
