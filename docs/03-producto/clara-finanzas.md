@@ -1,6 +1,6 @@
 # Clara — finanzas personales del dueño
 
-**Estado:** producto independiente; versión 1.5.0, en preparación del piloto con dueños.  
+**Estado:** producto independiente; versión 1.5.1, en preparación del piloto con dueños.  
 **Repo:** `C:\proyectos\clara` (Git local; sin remoto todavía).  
 **Decisión:** [ADR-017](../07-decisiones/ADR-017-clara-independiente.md).
 

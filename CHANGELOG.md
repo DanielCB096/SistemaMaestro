@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara 1.5.1: paquete de despliegue y handoff
+
+- Iconos y manifest corregidos (seguían siendo de la app de tareas); tema verde y nombre de finanzas.
+- `_headers` para Cloudflare Pages, cabeceras de `sw.js` en Netlify y guía de despliegue.
+- `HANDOFF.md` y kit del piloto: instalación, llamadas, privacidad, checklist y CSV de seguimiento.
+- 91 pruebas verdes.
+
 ## 2026-11-27 — Clara 1.5.0: offline real y decisión de pausar
 
 - Service worker con precache atómico, navegación desde caché, aviso de nueva versión y recarga única; verificado sin conexión.

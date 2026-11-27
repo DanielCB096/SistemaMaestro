@@ -79,3 +79,4 @@
 
 - [Pendientes post-H1](09-pendientes/h1-post-merge.md)
 - [Pendientes de H2](09-pendientes/h2-pendientes.md)
+- [Clara — handoff y piloto](09-pendientes/clara-handoff.md)
