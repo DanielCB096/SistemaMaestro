@@ -1,6 +1,6 @@
 # Clara — finanzas personales del dueño
 
-**Estado:** producto independiente; versión 1.1.0, pendiente validación con usuarios.  
+**Estado:** producto independiente; versión 1.2.0, pendiente validación con usuarios.  
 **Repo:** `C:\proyectos\clara` (Git local; sin remoto todavía).  
 **Decisión:** [ADR-017](../07-decisiones/ADR-017-clara-independiente.md).
 
@@ -55,7 +55,7 @@ si se quiere medir valor real.
 
 | Riesgo | Mitigación |
 |---|---|
-| Pérdida de datos al limpiar el navegador o cambiar de teléfono | **Resuelto en 1.1.0:** recordatorio de respaldo, exportación visible y `navigator.storage.persist()` |
+| Pérdida de datos al limpiar el navegador o cambiar de teléfono | **1.1.0:** recordatorio de respaldo, exportación y `storage.persist()`. **1.2.0:** escritura verificada, copia previa a migraciones y pantalla de recuperación |
 | Sin multi-dispositivo | Documentarlo; exportar/importar manual |
 | Cuota de 5 MB | Medir con historial de varios años; archivado anual |
 | Deriva de alcance hacia el negocio | ADR y frontera explícita |
@@ -70,6 +70,12 @@ Web Share → bienvenida con demo efímero → cierre semanal → benchmark de
 almacenamiento. Detalle en el repo de Clara:
 `docs/roadmap-1.2.md`. Fuera del ciclo: IndexedDB (solo medir), cifrado de
 respaldos, flujo a 30 días y paywall.
+
+## Avance 1.2.0
+
+- Captura rápida con botón flotante, monto primero, categorías frecuentes y repetir el último movimiento.
+- Red de seguridad de datos: escritura en doble clave, copia interna antes de migrar, rechazo de versiones futuras y recuperación guiada.
+- 79 pruebas verdes y CI. Pendiente: respaldo verificable con Web Share, bienvenida con demo, cierre semanal y benchmark.
 
 ## Plan de 30 días
 

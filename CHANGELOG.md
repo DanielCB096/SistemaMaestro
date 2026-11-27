@@ -8,6 +8,12 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara 1.2.0: captura rápida y datos protegidos
+
+- Captura en tres toques (monto, categoría frecuente, guardar) y repetir el último movimiento.
+- Escritura verificada en doble clave, copia interna antes de migrar y recuperación guiada si el documento se daña o viene de una versión futura.
+- 79 pruebas verdes; documentado en `docs/03-producto/clara-finanzas.md`.
+
 ## 2026-11-27 — Clara entra al catálogo como producto independiente
 
 - Clara se define como PWA de finanzas personales del dueño, separada de POSale y Centro Fit, con repo propio y frontera de datos estricta ([ADR-017](docs/07-decisiones/ADR-017-clara-independiente.md)).
