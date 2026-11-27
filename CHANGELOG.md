@@ -8,6 +8,11 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Reembolso de ventas anuladas
+
+- El detalle de la venta anulada registra reembolsos por método y en partes; el efectivo genera retiro de caja y el fiado no se reembolsa ([ADR-015](docs/07-decisiones/ADR-015-reembolso-anulacion.md)).
+- Esquema v22; 9 pruebas nuevas; suite completa: 534.
+
 ## 2026-11-27 — Costo del catálogo al registrar entradas
 
 - La entrada de inventario actualiza `Productos.Costo` con el costo capturado, con casilla para conservar el actual y bitácora atómica ([ADR-014](docs/07-decisiones/ADR-014-costo-entrada.md)).

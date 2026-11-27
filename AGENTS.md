@@ -53,6 +53,7 @@ Este repositorio es la **fuente de verdad documental** de SistemaMaestro. El có
 - **H3 hecho:** caracterización del inventario y reconciliación del stock ([ADR-005](docs/07-decisiones/ADR-005-stock-movimientos.md)); 430 pruebas.
 - **H4 hecho:** gasto de caja solo en efectivo ([ADR-006](docs/07-decisiones/ADR-006-gasto-caja-efectivo.md)) y bitácora atómica en dinero, inventario, catálogo, clientes, proveedores, usuarios y configuración ([ADR-007](docs/07-decisiones/ADR-007-bitacora-transaccion.md)); 442 pruebas.
 - **H4.2b y H5 fusionados en `main` de `tienda`** (`f2f4110` y `0b15fe6`, CI `45684057019` en verde).
+- **Reembolsos:** ventas anuladas con reembolso por método, partes y retiro de caja para efectivo ([ADR-015](docs/07-decisiones/ADR-015-reembolso-anulacion.md)); 534 pruebas.
 - **Costo en entradas:** la entrada actualiza el costo del catálogo con casilla para conservarlo ([ADR-014](docs/07-decisiones/ADR-014-costo-entrada.md)); precio sugerido con margen en pesos; 525 pruebas; verificado en Windows el 2026-11-27.
 - **Ventas por día:** Reportes agrupa por día con total, costo+comisión y utilidad bruta en pantalla, CSV y PDF; 514 pruebas.
 - **Descuento por producto:** % o monto con permiso de dueño/encargado, reparto por línea e IVA neto ([ADR-013](docs/07-decisiones/ADR-013-descuento-por-producto.md)); 510 pruebas; verificado en Windows.
