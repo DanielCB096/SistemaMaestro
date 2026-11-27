@@ -63,6 +63,8 @@
 - [ADR-014 — Costo del catálogo al registrar entradas](07-decisiones/ADR-014-costo-entrada.md)
 - [ADR-015 — Reembolso de ventas anuladas](07-decisiones/ADR-015-reembolso-anulacion.md)
 - [ADR-016 — Licencia offline sin bloqueo](07-decisiones/ADR-016-licencia-offline.md)
+- [ADR-017 — Clara como producto independiente](07-decisiones/ADR-017-clara-independiente.md)
+- [Clara — finanzas personales del dueño](03-producto/clara-finanzas.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes

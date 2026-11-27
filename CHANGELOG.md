@@ -8,6 +8,12 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara entra al catálogo como producto independiente
+
+- Clara se define como PWA de finanzas personales del dueño, separada de POSale y Centro Fit, con repo propio y frontera de datos estricta ([ADR-017](docs/07-decisiones/ADR-017-clara-independiente.md)).
+- README corregido (ya no es gestor de tareas), Git inicializado y tag `v1.0.0`; 62 pruebas verdes.
+- Ficha de producto y plan de validación en [clara-finanzas.md](docs/03-producto/clara-finanzas.md).
+
 ## 2026-11-27 — Licencia offline
 
 - POSale agrega licencia perpetua firmada RSA-PSS, prueba de 30 días y avisos sin bloqueo; herramienta de emisión `SistemaTienda.Licencias` ([ADR-016](docs/07-decisiones/ADR-016-licencia-offline.md)).
