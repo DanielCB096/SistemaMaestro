@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara 1.3.0: respaldos verificables y modo ejemplo
+
+- La copia exportada incluye huella de integridad y conteos; “Probar un respaldo” la valida sin escribir.
+- Exportación por Web Share (WhatsApp, correo) o descarga, con estado de la última copia en ajustes.
+- Modo ejemplo en memoria para explorar la app sin guardar ni exportar datos falsos.
+- 86 pruebas verdes. Detectado pendiente: el service worker no se registra desde la app.
+
 ## 2026-11-27 — Clara 1.2.0: captura rápida y datos protegidos
 
 - Captura en tres toques (monto, categoría frecuente, guardar) y repetir el último movimiento.
