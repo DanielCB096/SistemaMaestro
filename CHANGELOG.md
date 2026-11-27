@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara 1.5.0: offline real y decisión de pausar
+
+- Service worker con precache atómico, navegación desde caché, aviso de nueva versión y recarga única; verificado sin conexión.
+- Se retiró “Categorías: próximamente” y se aclaró el alcance de “te queda libre”.
+- Tres IAs concluyeron pausar el desarrollo y validar con 3–5 dueños; plan, métricas y criterios de cancelación documentados.
+- 91 pruebas verdes.
+
 ## 2026-11-27 — Clara 1.4.0: cierre semanal y almacenamiento medido
 
 - Tarjeta “Tu semana” en el panel: entró, salió, queda libre, comparación con la semana anterior, top 3 de gastos y presupuestos al 80 %.

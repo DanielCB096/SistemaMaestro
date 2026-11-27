@@ -1,6 +1,6 @@
 # Clara — finanzas personales del dueño
 
-**Estado:** producto independiente; versión 1.4.0, pendiente validación con usuarios.  
+**Estado:** producto independiente; versión 1.5.0, en preparación del piloto con dueños.  
 **Repo:** `C:\proyectos\clara` (Git local; sin remoto todavía).  
 **Decisión:** [ADR-017](../07-decisiones/ADR-017-clara-independiente.md).
 
@@ -71,7 +71,7 @@ almacenamiento. Detalle en el repo de Clara:
 `docs/roadmap-1.2.md`. Fuera del ciclo: IndexedDB (solo medir), cifrado de
 respaldos, flujo a 30 días y paywall.
 
-## Avance 1.4.0
+## Avance 1.5.0
 
 - Captura rápida con botón flotante, monto primero, categorías frecuentes y repetir el último movimiento.
 - Red de seguridad de datos: escritura en doble clave, copia interna antes de migrar, rechazo de versiones futuras y recuperación guiada.
@@ -79,7 +79,10 @@ respaldos, flujo a 30 días y paywall.
 - Modo ejemplo efímero: se explora sin guardar nada y se sale con “Empezar con mis datos”.
 - Cierre semanal de solo lectura: últimos 7 días contra los anteriores, top 3 de gastos y presupuestos al 80 %.
 - Benchmark: 10 años ocupan 48 % de localStorage; 20 años, 96 %. No se migra a IndexedDB; el uso se muestra en ajustes.
-- 91 pruebas verdes y CI. Pendiente: registrar el service worker con aviso de actualización y validar con dueños.
+- Service worker con precache por versión, funcionamiento sin conexión y aviso de actualización; verificado en local.
+- Se retiró “Categorías: próximamente” y se aclaró que “te queda libre” no es efectivo en caja.
+- 91 pruebas verdes y CI. Tres IAs coincidieron en **pausar y validar**: no se agregan funciones hasta el piloto.
+- Plan del piloto, métricas y criterios de cancelación en el repo de Clara: `docs/piloto-clara.md`.
 
 ## Plan de 30 días
 
