@@ -1,6 +1,6 @@
 # Clara — finanzas personales del dueño
 
-**Estado:** producto independiente; versión 1.3.0, pendiente validación con usuarios.  
+**Estado:** producto independiente; versión 1.4.0, pendiente validación con usuarios.  
 **Repo:** `C:\proyectos\clara` (Git local; sin remoto todavía).  
 **Decisión:** [ADR-017](../07-decisiones/ADR-017-clara-independiente.md).
 
@@ -57,7 +57,7 @@ si se quiere medir valor real.
 |---|---|
 | Pérdida de datos al limpiar el navegador o cambiar de teléfono | **1.1.0:** recordatorio de respaldo, exportación y `storage.persist()`. **1.2.0:** escritura verificada, copia previa a migraciones y recuperación. **1.3.0:** respaldo con huella, prueba de restauración y modo ejemplo |
 | Sin multi-dispositivo | Documentarlo; exportar/importar manual |
-| Cuota de 5 MB | Medir con historial de varios años; archivado anual |
+| Cuota de 5 MB | Medido: 10 años = 48 %, 20 años = 96 %; uso visible en ajustes y archivado anual solo si hace falta |
 | Deriva de alcance hacia el negocio | ADR y frontera explícita |
 | README desactualizado | Corregido a finanzas personales |
 | Sin Git/versión | Repo inicializado, tag `v1.0.0` |
@@ -71,13 +71,15 @@ almacenamiento. Detalle en el repo de Clara:
 `docs/roadmap-1.2.md`. Fuera del ciclo: IndexedDB (solo medir), cifrado de
 respaldos, flujo a 30 días y paywall.
 
-## Avance 1.3.0
+## Avance 1.4.0
 
 - Captura rápida con botón flotante, monto primero, categorías frecuentes y repetir el último movimiento.
 - Red de seguridad de datos: escritura en doble clave, copia interna antes de migrar, rechazo de versiones futuras y recuperación guiada.
 - Respaldo con huella SHA-256 (o FNV-1a sin HTTPS), prueba de integridad sin escribir y exportación por Web Share o descarga.
 - Modo ejemplo efímero: se explora sin guardar nada y se sale con “Empezar con mis datos”.
-- 86 pruebas verdes y CI. Pendiente: registrar el service worker con aviso de actualización, cierre semanal y benchmark.
+- Cierre semanal de solo lectura: últimos 7 días contra los anteriores, top 3 de gastos y presupuestos al 80 %.
+- Benchmark: 10 años ocupan 48 % de localStorage; 20 años, 96 %. No se migra a IndexedDB; el uso se muestra en ajustes.
+- 91 pruebas verdes y CI. Pendiente: registrar el service worker con aviso de actualización y validar con dueños.
 
 ## Plan de 30 días
 

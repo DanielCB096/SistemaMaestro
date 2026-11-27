@@ -8,6 +8,13 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Clara 1.4.0: cierre semanal y almacenamiento medido
+
+- Tarjeta “Tu semana” en el panel: entró, salió, queda libre, comparación con la semana anterior, top 3 de gastos y presupuestos al 80 %.
+- Ajustes muestra el tamaño de los datos y el porcentaje de 5 MB.
+- Benchmark reproducible: 10 años = 48 % de localStorage, 20 años = 96 %; no se migra a IndexedDB.
+- 91 pruebas verdes.
+
 ## 2026-11-27 — Clara 1.3.0: respaldos verificables y modo ejemplo
 
 - La copia exportada incluye huella de integridad y conteos; “Probar un respaldo” la valida sin escribir.
