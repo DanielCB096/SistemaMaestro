@@ -1,7 +1,7 @@
 # ADR-015 — Reembolso de ventas anuladas
 
 - **Fecha:** 2026-11-27
-- **Estado:** Aceptado; verificación visual pendiente
+- **Estado:** Aceptado; verificado en Windows el 2026-11-27
 - **Hito:** Ventas y caja
 
 ## Contexto
@@ -52,4 +52,4 @@ después y porque una venta mixta tiene partes en efectivo y con tarjeta.
 
 - `ReembolsosTests`: efectivo con retiro, tarjeta sin caja, venta mixta,
   parciales, exceso, venta no anulada, fiado, empleado sin permiso y migración.
-- Pendiente: prueba visual en Windows y Android.
+- Verificado en Windows el 2026-11-27: reembolso completo en efectivo con retiro de caja y reembolso parcial con tarjeta, con pendiente visible. Android pendiente.

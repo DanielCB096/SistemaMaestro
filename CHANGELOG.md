@@ -12,12 +12,12 @@
 
 - `DiaCompletoTests` valida un día con todos los tipos de venta, descuentos, reembolsos, abono, gasto, merma y compra contra reportes y caja.
 - El escenario `demo` incluye descuentos, una anulación reembolsada y un reembolso parcial.
-- 535 pruebas.
+- 535 pruebas. Verificado en Windows el 2026-11-27.
 
 ## 2026-11-27 — Reembolso de ventas anuladas
 
 - El detalle de la venta anulada registra reembolsos por método y en partes; el efectivo genera retiro de caja y el fiado no se reembolsa ([ADR-015](docs/07-decisiones/ADR-015-reembolso-anulacion.md)).
-- Esquema v22; 9 pruebas nuevas; suite completa: 534.
+- Esquema v22; 9 pruebas nuevas; suite completa: 534. Verificado en Windows el 2026-11-27.
 
 ## 2026-11-27 — Costo del catálogo al registrar entradas
 
