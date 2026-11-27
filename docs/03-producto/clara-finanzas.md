@@ -1,6 +1,6 @@
 # Clara — finanzas personales del dueño
 
-**Estado:** producto independiente; versión 1.0.0, pendiente validación con usuarios.  
+**Estado:** producto independiente; versión 1.1.0, pendiente validación con usuarios.  
 **Repo:** `C:\proyectos\clara` (Git local; sin remoto todavía).  
 **Decisión:** [ADR-017](../07-decisiones/ADR-017-clara-independiente.md).
 
@@ -55,7 +55,7 @@ si se quiere medir valor real.
 
 | Riesgo | Mitigación |
 |---|---|
-| Pérdida de datos al limpiar el navegador o cambiar de teléfono | Recordatorio de respaldo, exportación visible y `navigator.storage.persist()` |
+| Pérdida de datos al limpiar el navegador o cambiar de teléfono | **Resuelto en 1.1.0:** recordatorio de respaldo, exportación visible y `navigator.storage.persist()` |
 | Sin multi-dispositivo | Documentarlo; exportar/importar manual |
 | Cuota de 5 MB | Medir con historial de varios años; archivado anual |
 | Deriva de alcance hacia el negocio | ADR y frontera explícita |

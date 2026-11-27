@@ -11,7 +11,8 @@
 ## 2026-11-27 — Clara entra al catálogo como producto independiente
 
 - Clara se define como PWA de finanzas personales del dueño, separada de POSale y Centro Fit, con repo propio y frontera de datos estricta ([ADR-017](docs/07-decisiones/ADR-017-clara-independiente.md)).
-- README corregido (ya no es gestor de tareas), Git inicializado y tag `v1.0.0`; 62 pruebas verdes.
+- README corregido (ya no es gestor de tareas), Git inicializado, tags `v1.0.0` y `v1.1.0`; 63 pruebas verdes.
+- 1.1.0 agrega recordatorio de respaldo, botón para posponerlo y `navigator.storage.persist()`.
 - Ficha de producto y plan de validación en [clara-finanzas.md](docs/03-producto/clara-finanzas.md).
 
 ## 2026-11-27 — Licencia offline

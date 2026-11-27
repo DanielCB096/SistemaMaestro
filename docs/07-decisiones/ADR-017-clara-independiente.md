@@ -48,6 +48,6 @@ con caja, empleados y datos fiscales, y rompería su promesa de privacidad.
 ## Verificación
 
 - README de Clara corregido a finanzas personales.
-- Repositorio Git inicializado con etiqueta `v1.0.0` y 62 pruebas verdes.
-- Pendiente: ficha de catálogo, recordatorio de respaldo, prueba en Android/iOS
-  y validación con 5–10 dueños.
+- Repositorio Git inicializado; versiones `v1.0.0` y `v1.1.0`; 63 pruebas verdes.
+- Ficha de catálogo y recordatorio de respaldo listos en 1.1.0.
+- Pendiente: prueba en Android/iOS y validación con 5–10 dueños.
