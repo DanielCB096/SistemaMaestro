@@ -60,6 +60,7 @@
 - [ADR-011 — Restauración guiada sin sesión](07-decisiones/ADR-011-restauracion-sin-sesion.md)
 - [ADR-012 — Edición de gastos](07-decisiones/ADR-012-edicion-gastos.md)
 - [ADR-013 — Descuento por producto](07-decisiones/ADR-013-descuento-por-producto.md)
+- [ADR-014 — Costo del catálogo al registrar entradas](07-decisiones/ADR-014-costo-entrada.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes
