@@ -17,7 +17,7 @@ Repositorio de diseño, decisiones y evolución de la plataforma modular para pe
 - **H6:** importación con vista previa, tickets en espera y búsqueda medida con 3,000 productos.
 - **Marca:** POSale; identificadores internos siguen como `SistemaTienda`.
 - **Piloto:** kit, plan, capacitación y registro listos; falta ejecutarlo en una tienda real.
-- **Pendientes de campo:** otro equipo/tablet, corte de energía real, restauración con tarjeta, bloqueo en Android, instalación limpia y escáner físico. Ver [`docs/09-pendientes`](docs/09-pendientes).
+- **Pendientes de campo:** otro equipo/tablet, corte de energía real, restauración con tarjeta, bloqueo en Android, instalación limpia y escáner físico. Ver [`docs/09-pendientes`](docs/09-pendientes) y el consolidado [Pendientes de POSale](docs/09-pendientes/tienda-pendientes.md).
 - **Open PRs heredadas:** #38 (`feat/restaurar-respaldos`) y #39 (`feat/ventas-historial`) siguen abiertas y atrasadas respecto a `main`; requieren decisión de cierre o rebase.
 
 ## Documentos clave
