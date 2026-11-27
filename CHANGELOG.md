@@ -8,6 +8,11 @@
 - Se documentan las PR #38 y #39 como abiertas y atrasadas respecto a `main`.
 - Revisión de GitHub: `tienda/main` en `c76d07a`, CI en verde; `SistemaMaestro/main` en `e382857`.
 
+## 2026-11-27 — Licencia offline
+
+- POSale agrega licencia perpetua firmada RSA-PSS, prueba de 30 días y avisos sin bloqueo; herramienta de emisión `SistemaTienda.Licencias` ([ADR-016](docs/07-decisiones/ADR-016-licencia-offline.md)).
+- 9 pruebas nuevas; suite completa: 544.
+
 ## 2026-11-27 — Simulación de un día completo
 
 - `DiaCompletoTests` valida un día con todos los tipos de venta, descuentos, reembolsos, abono, gasto, merma y compra contra reportes y caja.

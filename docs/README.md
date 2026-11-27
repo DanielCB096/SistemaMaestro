@@ -62,6 +62,7 @@
 - [ADR-013 — Descuento por producto](07-decisiones/ADR-013-descuento-por-producto.md)
 - [ADR-014 — Costo del catálogo al registrar entradas](07-decisiones/ADR-014-costo-entrada.md)
 - [ADR-015 — Reembolso de ventas anuladas](07-decisiones/ADR-015-reembolso-anulacion.md)
+- [ADR-016 — Licencia offline sin bloqueo](07-decisiones/ADR-016-licencia-offline.md)
 - [Plantilla](07-decisiones/ADR-000-plantilla.md)
 
 ## 08 — Agentes
