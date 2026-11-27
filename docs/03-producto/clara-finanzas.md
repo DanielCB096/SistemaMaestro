@@ -62,6 +62,15 @@ si se quiere medir valor real.
 | README desactualizado | Corregido a finanzas personales |
 | Sin Git/versión | Repo inicializado, tag `v1.0.0` |
 
+## Roadmap acordado (1.2)
+
+El debate entre tres IAs (producto, arquitectura y UX) dejó este orden:
+red de seguridad de datos → captura en 3 toques → respaldo verificable con
+Web Share → bienvenida con demo efímero → cierre semanal → benchmark de
+almacenamiento. Detalle en el repo de Clara:
+`docs/roadmap-1.2.md`. Fuera del ciclo: IndexedDB (solo medir), cifrado de
+respaldos, flujo a 30 días y paywall.
+
 ## Plan de 30 días
 
 1. **Días 1–5:** README real, Git, tag, revisar pruebas y modelo de datos.
