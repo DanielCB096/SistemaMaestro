@@ -12,7 +12,7 @@
 
 - La entrada de inventario actualiza `Productos.Costo` con el costo capturado, con casilla para conservar el actual y bitácora atómica ([ADR-014](docs/07-decisiones/ADR-014-costo-entrada.md)).
 - El dueño puede aplicar un precio sugerido que conserva el margen en pesos; la casilla está desmarcada por defecto.
-- 11 pruebas nuevas; suite completa: 525.
+- 11 pruebas nuevas; suite completa: 525. Verificado en Windows el 2026-11-27.
 
 ## 2026-11-26 — Ventas por día
 

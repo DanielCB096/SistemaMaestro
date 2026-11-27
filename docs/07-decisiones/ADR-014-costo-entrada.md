@@ -1,7 +1,7 @@
 # ADR-014 — Costo del catálogo al registrar entradas
 
 - **Fecha:** 2026-11-27
-- **Estado:** Aceptado; verificación visual pendiente
+- **Estado:** Aceptado; verificado en Windows el 2026-11-27
 - **Hito:** Inventario y utilidad
 
 ## Contexto
@@ -63,4 +63,4 @@ costo. La entrada manual era la excepción.
 - `CostoEntradaTests`: actualización atómica, casilla desmarcada, costo cero,
   costo igual, costo congelado de la siguiente venta, precio sugerido con margen
   en pesos, precio aplicado, precio cero y encargado sin permiso de precio.
-- Pendiente: prueba visual en Windows y Android.
+- Verificado en Windows el 2026-11-27: costo $12→$13 con precio sugerido $19, casilla desmarcada que conserva el precio y encargado sin control de precio. Android pendiente.
